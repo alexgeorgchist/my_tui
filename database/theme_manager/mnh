@@ -18,7 +18,7 @@ SCRIPTNAME=${0##*/}
 
 ## DIRECTORIES
 #cd $HOME && mkdir TEMP
-TEMP="/storage/emulated/0/TEMP"
+#TEMP="/storage/emulated/0/TEMP"
 #TEMPF="/storage/emulated/0/TEMP/my_tui-main"
 HOME="/storage/emulated/0"
 TUIDIR="/storage/emulated/0/t-ui"
@@ -28,9 +28,6 @@ ZP=".zip"
 
 ##LINKS
 LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/my_nethunter.zip"
-
-## THEMES
-z=".zip"
 
 ## LABELS
 
@@ -55,7 +52,7 @@ print_end () {
 
 ## START
     print_header
-cd $TUI && cp alias.txt $HOME #сохраняю мой алиас в корень
+cd $TUIDIR && cp alias.txt $HOME #сохраняю мой алиас в корень
 cd $HOME && rm -rf $TUI #удаляю папку T-UI в корне
     printf " \n"
     printf "Удаление папки t-ui --- Успешно." \
