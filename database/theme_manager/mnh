@@ -25,7 +25,7 @@ TUIDIR="/storage/emulated/0/t-ui"
 TUI="t-ui"
 
 ##LINKS
-LINK="https://github.com/alexgeorgchist/my_tui/archive/refs/heads/main.zip"
+LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/my_nethunter.zip"
 
 ## THEMES
 theme_1="my_nethunter"
