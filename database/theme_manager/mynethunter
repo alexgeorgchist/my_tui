@@ -1,0 +1,111 @@
+#!/bin/sh
+
+
+## My Theme Manager
+## Author  	: Ema ( thanks to Dedrabbit and guys )
+## Github  	: @ichs
+###########################
+##                       ##
+##  #   #  #####  #   #  ##
+##  ## ##    #    ## ##  ##
+##  # # #    #    # # #  ##
+##  #   #    #    #   #  ##
+##                       ##
+###########################
+
+SCRIPTNAME=${0##*/}
+
+## DIRECTORIES
+#cd $HOME && mkdir TEMP
+TEMP="/storage/emulated/0/TEMP"
+TEMPF="/storage/emulated/0/TEMP/my_tui-main"
+HOME="/storage/emulated/0"
+TUIDIR="/storage/emulated/0/t-ui"
+TUI="t-ui"
+
+##LINKS
+LINK="https://github.com/alexgeorgchist/my_tui/archive/refs/heads/main.zip"
+
+## THEMES
+theme_1="my_nethunter"
+theme_2="my_Sharif"
+theme_3="aqua"
+theme_4="gf45"
+theme_5="2022"
+z=".zip"
+
+
+
+## LABELS
+
+print_header () {
+    printf "%s\n" \
+        "#######################################"\
+        "#                                     #"\
+        "#   $SCRIPTNAME - МЕНЕДЖЕР T-UI ТЕМ        #"\
+        "#                                     #"\
+        "#######################################"
+    
+    printf " \n"
+}
+
+print_menu () {
+    printf " \n"
+    printf "%s\n" \
+        "#######################################"\
+        "#         СПИСОК ДОСТУНЫХ ТЕМ:        #"\
+        "#######################################"                                    #"\
+    printf "%s\n" \
+           "    1 my_nethunter"\
+           "    2 my_Sharif"\
+           "    3 aqua"\
+           "    4 gf45"\
+           "    5 2022"\
+    
+    printf " \n"
+}
+
+print_end () {
+    printf " \n"
+    printf "%s\n" \
+        "#######################################"\
+        "#                                     #"\
+        "#    $SCRIPTNAME - Тема «$NAME»     #"\
+        "#                                     #"\
+        "#     установлена. Перезагрузите.     #"\
+        "#                                     #"\
+        "#######################################"
+    
+    printf " \n"
+}
+
+
+
+## Подготовительные действия:
+
+    print_header
+#cd $TUI && cp alias.txt $TEMP #сохраняю мой алиас
+    printf " \n"
+cd $HOME && rm -rf $TUI #удаляю папку туи в корне
+    printf " \n"
+    printf "Удаление папки t-ui --- Успешно." \
+    printf " \n"
+    printf " \n"
+sleep 1
+
+cd $TEMP && curl -L -O $LINK #скачиваю с GitHub mytui.zip
+unzip -d $TEMP -o main.zip
+
+## 
+
+cd $TEMPF && unzip -qd $HOME -o $theme_1$z
+
+
+
+#cd $HOME && rm -rf TEMP
+
+      
+print_end
+
+
+
