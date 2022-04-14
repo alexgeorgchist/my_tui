@@ -67,7 +67,7 @@ unzip -d $HOME -o $THEME$ZP
 
 ## 
 #cd $HOME && rm -rf ?
-cd $HOME && mv alias.txt $TUI #возвращаю мой алиас в T-UI
+cd $HOME && mv -f alias.txt $TUI #возвращаю мой алиас в T-UI
 print_end
 
 
