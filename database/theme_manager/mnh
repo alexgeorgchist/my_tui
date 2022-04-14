@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 ## My Theme Manager
 ## Author  	: AGCH ( thanks to EMA,Dedrabbit and guys )
 ## Github  	: @alexgeorgchist
@@ -28,13 +27,14 @@ ZP=".zip"
 
 ##LINKS
 LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/my_nethunter.zip"
+LINKSSCRIPT="https://github.com/alexgeorgchist/my_tui/edit/main/database/theme_manager/mnh"
 
 ## LABELS
 
 print_header () {
     printf "%s\n" \
         "#######################################"\
-        "#  $SCRIPTNAME - УСТАНОВКА ТЕМЫ $THEME #"\
+        "#  $SCRIPTNAME - УСТАНОВКА ТЕМЫ $THEME  #"\
         "#######################################"
         printf " \n"
 }
@@ -43,7 +43,7 @@ print_end () {
     printf " \n"
     printf "%s\n" \
         "#######################################"\
-        "#    $SCRIPTNAME - Тема «$THEME»       #"\
+        "#     $SCRIPTNAME - Тема «$THEME»       #"\
         "#   установлена. Перезагрузите T_UI   #"\
         "#######################################"
     
@@ -52,20 +52,32 @@ print_end () {
 
 ## START
     print_header
-cd $TUIDIR && cp alias.txt $HOME #сохраняю мой алиас в корень
-cd $HOME && rm -rf $TUI #удаляю папку T-UI в корне
+#cd $TUIDIR && mv -f alias.txt $HOME #сохраняю мой алиас в корень
+cd $HOME && rm -rf $TUIDIR #удаляю папку T-UI в корне
     printf " \n"
-    printf "Удаление папки t-ui --- Успешно." \
     printf " \n"
-sleep 1
+    printf "::.:: Удаление папки t-ui --- Успешно ::.::" \
+    printf " \n"
+    printf " \n"
 
 cd $HOME && curl -L -O $LINK #скачиваю с GitHub mynethunter.zip
-unzip -d $HOME -o $THEME$ZP
+    printf " \n"
+    printf " \n"
+    printf "::.:: Распаковываю архив ::.::"
+    printf " \n"
+    printf " \n"
+unzip -d $HOME -q $THEME$ZP
 
 ## 
-#cd $HOME && rm -rf ?
-cd $HOME && mv -f alias.txt $TUI #возвращаю мой алиас в T-UI
+#cd $HOME && rm -rf nethunter.zip
+#cd $HOME && mv -f alias.txt $TUIDIR #возвращаю мой алиас в T-UI
 print_end
+
+
+
+
+
+
 
 
 
