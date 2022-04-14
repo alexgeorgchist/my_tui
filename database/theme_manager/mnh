@@ -68,7 +68,7 @@ cd $HOME && curl -L -O $LINK #скачиваю с GitHub mynethunter.zip
     printf " \n"
 unzip -d $HOME -q $THEME$ZP
 
-cd $HOME && curl -L -O $LINKSCRIPT #скачиваю с GitHub mnh скрипт
+#cd $HOME && curl -L -O $LINKSCRIPT #скачиваю с GitHub mnh скрипт
 
 ## 
 #cd $HOME && rm -rf nethunter.zip
