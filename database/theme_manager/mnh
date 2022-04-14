@@ -27,7 +27,7 @@ ZP=".zip"
 
 ##LINKS
 LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/my_nethunter.zip"
-LINKSSCRIPT="https://github.com/alexgeorgchist/my_tui/edit/main/database/theme_manager/mnh"
+LINKSCRIPT="https://github.com/alexgeorgchist/my_tui/edit/main/database/theme_manager/mnh"
 
 ## LABELS
 
@@ -67,6 +67,8 @@ cd $HOME && curl -L -O $LINK #скачиваю с GitHub mynethunter.zip
     printf " \n"
     printf " \n"
 unzip -d $HOME -q $THEME$ZP
+
+cd $HOME && curl -L -O $LINKSCRIPT #скачиваю с GitHub mnh скрипт
 
 ## 
 #cd $HOME && rm -rf nethunter.zip
