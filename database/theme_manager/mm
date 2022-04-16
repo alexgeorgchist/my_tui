@@ -78,14 +78,14 @@ show_help(){
 	printf " \n"
 	printf "  %${padding}s %s\n" \
         "Примечание:" \
-        "Набрать mm  и выбранный аттрибут через пробел."
+        "Набрать sh mm  и выбранный аттрибут через пробел."
         
 	exit 1
 }
 
 show_theme(){
 
-	echo " Название моей программы"
+	echo " Менеджер тем"
 	padding=-20
 	printf " \n"
 	printf "%s\n" \
@@ -140,7 +140,7 @@ case "$1" in
 		show_help
         ;;
     *)
-        printf " :: Недействительный аттрибут.\n Наберите ??? -h для справки \n"
+        printf " :: Недействительный аттрибут.\n Наберите sh mm -h для справки \n"
         exit 1
         ;;
 esac
@@ -148,7 +148,7 @@ esac
 
 
 
-## START
+##  
 
     print_header
     cd $HOME
