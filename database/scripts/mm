@@ -28,6 +28,7 @@ LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database"
 #LINKSCRIPT="https://github.com/alexgeorgchist/my_tui/edit/main/database/scripts/"
 SCRIPT="https://github.com/alexgeorgchist/my_tui/raw/main/database/script.zip"
 LOGOS="https://github.com/alexgeorgchist/my_tui/raw/main/database/logos.zip"
+MM="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database/scripts/mm"
 
 
 ## LABELS
