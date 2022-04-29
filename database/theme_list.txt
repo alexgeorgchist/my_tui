@@ -1,1 +1,7 @@
-my_nethunter my_sharif aqua gf45 yellow big_bold tomato_silver
+my_nethunter
+my_sharif
+aqua
+gf45
+yellow
+big_bold
+tomato_silver
