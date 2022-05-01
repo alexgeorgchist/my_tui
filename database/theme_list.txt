@@ -1,1 +1,1 @@
-"1. my_nethunter" "2. my_sharif" "3. aqua" "4. gf45" "5. yellow" "6. big_bold" "7. tomato_silver"
+my_nethunter my_sharif aqua gf45 yellow big_bold tomato_silver
