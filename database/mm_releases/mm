@@ -144,10 +144,11 @@ load_theme() {
     echo " :.: Процесс загрузки из репозитория"
     echo "     файл установки $CHOSEN_THEME$ZP:";sleep 0.5
     cd $HOME
-    curl -LJO -s $LINK/$CHOSEN_THEME$ZP &&  echo "     - успешно" || echo "     - ошибка загрузки"
+    curl -LJO -s $LINK/$CHOSEN_THEME$ZP &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
     
     echo "      Распаковка:";sleep 0.5
-    unzip -d $HOME -q $CHOSEN_THEME$ZP &&     echo "     - успешно" || echo "     - ошибка распаковки"
+    unzip -d $HOME -q $CHOSEN_THEME$ZP &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
     rm -rf $CHOSEN_THEME$ZP
 
 }
@@ -155,7 +156,7 @@ load_theme() {
 
 additional_folders() {
 
-SCRIPTILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/script.zip"
+SCRIPTFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/script.zip"
 LOGOSFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/logos.zip"
 ASCIIFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/ascii.zip"
  
@@ -163,14 +164,14 @@ ASCIIFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/as
     echo " "
     echo " :.:  Добавление папок:";sleep 0.5
     cd $TUIDIR
-    curl -LJO -s $SCRIPTFILE && echo "     - архив script.zip скачан успешно" || echo "     - архив script.zip --- ошибка загрузки"
-    curl -LJO -s $LOGOSFILE && echo "     - архив logos.zip  скачан успешно" || echo "     - архив logos.zip  --- ошибка загрузки"
-    curl -LJO -s $ASCIIFILE && echo "     - архив ascii.zip  скачан успешно" || echo "     - архив ascii.zip  --- ошибка загрузки"
+    curl -LJO -s $SCRIPTFILE && echo "     - script.zip загрузка --> успешно" || echo "     - архив script.zip --- ошибка загрузки"
+    curl -LJO -s $LOGOSFILE && echo "     - logos.zip  загрузка --> успешно" || echo "     - архив logos.zip  --- ошибка загрузки"
+    curl -LJO -s $ASCIIFILE && echo "     - ascii.zip  загрузка --> успешно" || echo "     - архив ascii.zip  --- ошибка загрузки"
     
     echo "      Распаковка:";sleep 0.5
-    unzip -q script.zip && echo "     - папка «script» --- успешно" || echo "     - «script» --- ошибка"
-    unzip -q logos.zip && echo "     - папка «logos»  --- успешно" || echo "     - «logos» --- ошибка"
-    unzip -q ascii.zip && echo "     - папка «ascii»  --- успешно" || echo "     - «ascii» --- ошибка"
+    unzip -q script.zip && echo "     - папка «script» --- успешно" || echo "     - «script» --- ошибка загрузки"
+    unzip -q logos.zip && echo "     - папка «logos»  --- успешно" || echo "     - «logos» --- ошибка загрузки"
+    unzip -q ascii.zip && echo "     - папка «ascii»  --- успешно" || echo "     - «ascii» --- ошибка загрузки"
     rm -rf script.zip logos.zip ascii.zip
 
 }
@@ -192,13 +193,19 @@ add_aliases() {
 
 
 add_memo() {
+
 ## Add memo script
 
+MEMFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/mem.zip"
+
     echo " "
-    echo " :.:  Добавление скрипта troppokoy:";sleep 0.5
+    echo " :.:  Добавление скрипта memo:";sleep 0.5
+    cd $SCRIPTDIR
+    curl -LJO -s $MEMFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q mem.zip &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
 
-echo "memo =sh /storage/emulated/0/t-ui/script/mem %">>$TUIDIR/alias.txt
-
+    echo "memo =sh /storage/emulated/0/t-ui/script/memo %">>$TUIDIR/alias.txt
+   
 }
 
 
@@ -211,13 +218,12 @@ TROPPOKOYFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/script
     echo " "
     echo " :.:  Добавление скрипта troppokoy:";sleep 0.5
     cd $TUIDIR
-    curl -LJO -s $TROPPOKOYFILE
+    curl -LJO -s $TROPPOKOYFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
     unzip -q troppokoy.zip
-    mv troppokoy $SCRIPTDIR
+    mv troppokoy $SCRIPTDIR &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
     rm -rf troppokoy.zip
 
-    echo "troppokoy=sh /storage/emulated/0/t-ui/script/troppokoy %">>$TUIDIR/alias.txt
-    echo "     - успешно"
+    echo "troppokoy=sh /storage/emulated/0/t-ui/script/troppokoy %">>$TUIDIR/alias.tx
 
 }
 
@@ -231,13 +237,12 @@ PSALM="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/6p.zip
     echo " "
     echo " :.:  Добавление скрипта 6p:";sleep 0.5
     cd $TUIDIR
-    curl -LJO -s $PSALM
+    curl -LJO -s $PSALM &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
     unzip -q 6p.zip
-    mv 6p $TUIDIR/script
+    mv 6p $TUIDIR/script &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
     rm -rf 6p.zip
 
     echo "6p=sh /storage/emulated/0/t-ui/script/6p %">>$TUIDIR/alias.txt
-    echo "     - успешно"
 
 }
 
