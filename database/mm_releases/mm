@@ -16,15 +16,18 @@
 
 SCRIPTNAME=${0##*/}
 
+##DIRECTORIES
 HOME="/storage/emulated/0"
+TUIDIR="/storage/emulated/0/t-ui"
+SCRIPTDIR="/storage/emulated/0/script"
+ASCIIDIR="/storage/emulated/0/ascii"
+LOGODIR="/storage/emulated/0/logo"
+
 TUI="t-ui"
 ZP=".zip"
 
 ## LINKS
 LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes_zip_arhive"
-SCRIPT="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/script.zip"
-LOGOS="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/logos.zip"
-ASCII="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/ascii.zip"
 
 ##  GET THEME LIST
 cd $HOME && curl -o list.txt -s https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database/theme_list.txt
@@ -38,7 +41,8 @@ rm -rf $ppp
 print_header_mmpic() {
 
     printf " \n"
-    cat $HOME/$TUI/ascii/mmpic.txt
+    cat $ASCIIDIR/mmpic.txt
+    
 }
 
 
@@ -54,6 +58,7 @@ print_end () {
     
     printf " \n\n"
     exit 1
+    
 }
 
 
@@ -84,10 +89,11 @@ show_help() {
         " Набрать mm далее выбранный аттрибут через пробел."
         
 	exit 1
+	
 }
 
 
-show_theme(){
+show_theme() {
 
     print_header_mmpic
     sleep 0.5
@@ -114,10 +120,11 @@ done
 		" :.: mm -h    -- вызов справки"
 		
     exit 1
+    
 }
 
 
-version(){
+version() {
 
 	printf "%s\n" \
 	          " " \
@@ -132,9 +139,7 @@ version(){
 
 load_theme() {
 
- #   printf "\n\n :.:  Удаление папки t-ui ...  :.:"
     cd $HOME && rm -rf $TUI
-#    printf "\n\n ...  УСПЕШНО.  "
 
     echo " :.: Процесс загрузки из репозитория"
     echo "     файл установки $CHOSEN_THEME$ZP:";sleep 0.5
@@ -145,67 +150,79 @@ load_theme() {
     unzip -d $HOME -q $CHOSEN_THEME$ZP &&     echo "     - успешно" || echo "     - ошибка распаковки"
     rm -rf $CHOSEN_THEME$ZP
 
-
 }
 
 
 additional_folders() {
+
+SCRIPTILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/script.zip"
+LOGOSFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/logos.zip"
+ASCIIFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/ascii.zip"
  
-    cd $HOME/$TUI && rm -rf script logos ascii
+    cd $TUIDIR && rm -rf script logos ascii
     echo " "
     echo " :.:  Добавление папок:";sleep 0.5
-    cd $HOME/$TUI
-    curl -LJO -s $SCRIPT && echo "     - архив script.zip скачан успешно" || echo "     - архив script.zip --- ошибка загрузки"
-    curl -LJO -s $LOGOS && echo "     - архив logos.zip  скачан успешно" || echo "     - архив logos.zip  --- ошибка загрузки"
-    curl -LJO -s $ASCII && echo "     - архив ascii.zip  скачан успешно" || echo "     - архив ascii.zip  --- ошибка загрузки"
+    cd $TUIDIR
+    curl -LJO -s $SCRIPTFILE && echo "     - архив script.zip скачан успешно" || echo "     - архив script.zip --- ошибка загрузки"
+    curl -LJO -s $LOGOSFILE && echo "     - архив logos.zip  скачан успешно" || echo "     - архив logos.zip  --- ошибка загрузки"
+    curl -LJO -s $ASCIIFILE && echo "     - архив ascii.zip  скачан успешно" || echo "     - архив ascii.zip  --- ошибка загрузки"
     
     echo "      Распаковка:";sleep 0.5
-    unzip -q script.zip && echo "     - папка «script» --- успешно" || echo "     - папка «script» --- не успешно"
-    unzip -q logos.zip && echo "     - папка «logos»  --- успешно" || echo "     - папка «logos» --- не успешно"
-    unzip -q ascii.zip && echo "     - папка «ascii»  --- успешно" || echo "     - папка «ascii» --- не успешно"
+    unzip -q script.zip && echo "     - папка «script» --- успешно" || echo "     - «script» --- ошибка"
+    unzip -q logos.zip && echo "     - папка «logos»  --- успешно" || echo "     - «logos» --- ошибка"
+    unzip -q ascii.zip && echo "     - папка «ascii»  --- успешно" || echo "     - «ascii» --- ошибка"
     rm -rf script.zip logos.zip ascii.zip
-#    printf "\n\n ...  УСПЕШНО.  :.:"
 
 }
 
 add_aliases() {
 
-## Add lines in to alias.txt
+## Add aliases in to alias.txt
 
-    echo "mm =sh /storage/emulated/0/mm %">>/storage/emulated/0/t-ui/alias.txt
-    echo "mm -p=search -u https://github.com/alexgeorgchist/my_tui/tree/main/database">>/storage/emulated/0/t-ui/alias.txt
-    echo " memo =sh /storage/emulated/0/t-ui/script/mem %">>/storage/emulated/0/t-ui/alias.txt
-    echo "sysinfo=sh /sdcard/t-ui/script/sysinfo %">>/storage/emulated/0/t-ui/alias.txt
-    echo "chwf=sh /sdcard//t-ui/script/chwf %">>/storage/emulated/0/t-ui/alias.txt
-    echo "aliases=cat /sdcard/t-ui/alias.txt">>/storage/emulated/0/t-ui/alias.txt
-    echo "ttm =sh /storage/emulated/0/ttm %
-">>/storage/emulated/0/t-ui/alias.txt
-    echo "ttm -p=search -u https://github.com/M4dGun/t-ui_themes">>/storage/emulated/0/t-ui/alias.txt
+    echo "mm =sh /storage/emulated/0/mm %">>$TUIDIR/alias.txt
+    echo "mm -p=search -u https://github.com/alexgeorgchist/my_tui/tree/main/database">>$TUIDIR/alias.txt
+    echo "sysinfo=sh /sdcard/t-ui/script/sysinfo %">>$TUIDIR/alias.txt
+    echo "chwf=sh /sdcard//t-ui/script/chwf %">>$TUIDIR/alias.txt
+    echo "aliases=cat /sdcard/t-ui/alias.txt">>$TUIDIR/alias.txt
+    
+    echo "ttm =sh /storage/emulated/0/ttm %">>$TUIDIR/alias.txt
+    echo "ttm -p=search -u https://github.com/M4dGun/t-ui_themes">>$TUIDIR/alias.txt
 
 }
 
 
-add_tropar(){
-
-## Add tropar in to alias.txt
-
-TROPPOKOY="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/troppokoy.zip"
+add_memo() {
+## Add memo script
 
     echo " "
     echo " :.:  Добавление скрипта troppokoy:";sleep 0.5
-    cd $HOME/$TUI
-    curl -LJO -s $TROPPOKOY
+
+echo "memo =sh /storage/emulated/0/t-ui/script/mem %">>$TUIDIR/alias.txt
+
+}
+
+
+add_troppokoy(){
+
+## Add tropar in to alias.txt
+
+TROPPOKOYFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/troppokoy.zip"
+
+    echo " "
+    echo " :.:  Добавление скрипта troppokoy:";sleep 0.5
+    cd $TUIDIR
+    curl -LJO -s $TROPPOKOYFILE
     unzip -q troppokoy.zip
-    mv troppokoy $HOME/$TUI/script
+    mv troppokoy $SCRIPTDIR
     rm -rf troppokoy.zip
 
-    echo "troppokoy=sh /storage/emulated/0/t-ui/script/troppokoy %">>/storage/emulated/0/t-ui/alias.txt
+    echo "troppokoy=sh /storage/emulated/0/t-ui/script/troppokoy %">>$TUIDIR/alias.txt
     echo "     - успешно"
 
 }
 
 
-add_6p() {
+add_6psalm() {
 
 ## Add 6psalm
 
@@ -213,13 +230,13 @@ PSALM="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/6p.zip
 
     echo " "
     echo " :.:  Добавление скрипта 6p:";sleep 0.5
-    cd $HOME/$TUI
+    cd $TUIDIR
     curl -LJO -s $PSALM
     unzip -q 6p.zip
-    mv 6p $HOME/$TUI/script
+    mv 6p $TUIDIR/script
     rm -rf 6p.zip
 
-    echo "6p=sh /storage/emulated/0/t-ui/script/6p %">>/storage/emulated/0/t-ui/alias.txt
+    echo "6p=sh /storage/emulated/0/t-ui/script/6p %">>$TUIDIR/alias.txt
     echo "     - успешно"
 
 }
@@ -259,6 +276,7 @@ print_header_mmpic
 load_theme
 additional_folders
 add_aliases
-add_tropar
-add_6p
+add_memo
+add_troppokoy
+add_6psalm
 print_end
