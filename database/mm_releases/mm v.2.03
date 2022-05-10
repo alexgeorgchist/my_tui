@@ -1,0 +1,354 @@
+#!/bin/sh
+
+## MM - My Manager
+## Author  	: AGCH ( thanks to EMA,Dedrabbit and guys )
+## Github  	: @alexgeorgchist
+
+##################################
+##                              ##
+##       ##   ##  ##   ##       ##
+##   #   ### ###  ### ###   #   ##
+##  ###  ## # ##  ## # ##  ###  ##
+##   #   ##   ##  ##   ##   #   ##
+##       ##   ##  ##   ##       ##
+##                              ##
+##################################
+
+SCRIPTNAME=${0##*/}
+
+##DIRECTORIES
+HOME="/storage/emulated/0"
+TUIDIR="/storage/emulated/0/t-ui"
+SCRIPTDIR="/storage/emulated/0/t-ui/script"
+ASCIIDIR="/storage/emulated/0/t-ui/ascii"
+LOGODIR="/storage/emulated/0/t-ui/logo"
+
+TUI="t-ui"
+ZP=".zip"
+
+## LINK
+LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes_zip_arhive"
+
+##  GET THEME LIST
+cd $HOME && curl -o list.txt -s https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database/theme_list.txt
+ppp=list.txt
+THEME_LIST=(`cat "$ppp"`)
+LIMIT=${#THEME_LIST[@]} #Number of topics in the array list
+rm -rf $ppp
+
+
+
+
+print_header_mmpic() {
+mmpic="$ASCIIDIR/mmpic.txt"
+if [[ ! -f $mmpic ]]
+    then
+    cd $HOME
+    curl -LJO -s https://github.com/alexgeorgchist/my_tui/raw/main/database/files_for_tui/mmpic.zip
+    unzip -d $HOME -q mmpic.zip
+    printf " \n"
+    cat $HOME/mmpic.txt
+    rm -rf mmpic.txt mmpic.zip
+    else
+    printf " \n"
+    cat $ASCIIDIR/mmpic.txt
+fi
+    
+}
+
+
+print_end () {
+
+    printf " \n"
+    printf "%s\n" \
+        "========================================"\
+        "      $SCRIPTNAME - Тема «$CHOSEN_THEME»        "\
+        "         успешно установлена.        " \
+        "" \
+        "         Перезагрузите «T-UI» " \
+        "" \
+        "=============== THE END ================"
+    
+    printf " \n\n"
+    exit 1
+    
+}
+
+
+show_help() {
+
+	padding=-14
+	print_header_mmpic
+	printf "%s\n" \
+	    " :.: Как пользоваться:"\
+        "     $SCRIPTNAME [-h, --help]"\
+        "        [-l, --list]"\
+        "        [1,2 или 3... до $LIMIT]"\
+        "        [-v, --version]"
+
+		
+    printf " \n"
+    printf "  %${padding}s %s\n" \
+	    "От 1 до $LIMIT" "Установка темы n.1 (2,3 и т.д.)" \
+        "-l, --list" "Показать доступные темы" \
+        "-h, --help" "Справка по использованию" \
+        "-v, --version" "Версия программы"
+        
+	printf " \n"
+	printf "  %${padding}s %s\n" \
+        " :.: Примечание:" \
+        " Набрать mm далее выбранный аттрибут через пробел."
+        
+	exit 1
+	
+}
+
+
+show_theme() {
+
+    print_header_mmpic
+    sleep 0.5
+    padding=-20
+	printf " \n"
+	printf "%s\n" \
+	    "  ---------------------------------- "\
+        "         СПИСОК ДОСТУПНЫХ ТЕМ:         "
+
+VAR=1 # Number of topics in the array list LIMIT=${#THEME_LIST[@]}
+while [ "$VAR" -le "$LIMIT" ] # <=
+do
+    echo "   $VAR. ${THEME_LIST[$VAR-1]}"
+    VAR=`expr $VAR + 1` # Allowed VAR=$(($VAR+1)) or let "VAR += 1"
+done
+
+	printf "%s\n \n " \
+	    "  ---------------------------------- "    
+	sleep 0.5
+	printf "%s\n " \
+		" :.: Для установки набрать: mm номер" \
+		"     Пример: mm 5 [ загрузка yellow ] " \
+	    " " \
+		" :.: mm -h    -- вызов справки"
+		
+    exit 1
+    
+}
+
+
+version() {
+
+	printf "%s\n" \
+	          " " \
+              " :.: $SCRIPTNAME - My Manager ( themes for t-ui )" \
+	          " :.: Версия программы  v.2.03 от 10.05.22 "
+	
+}
+
+
+load_chosen_theme() {
+
+cd $HOME && rm -rf $TUI
+
+if [[ ! -d TEMP ]]
+    then mkdir /storage/emulated/0/TEMP && echo " :.: Создана папка для временных файлов";sleep 0.5
+    else echo " :.: Назначена папка для временных файлов";sleep 0.5
+fi
+    TEMP="/storage/emulated/0/TEMP" #TMP folder for temporary files
+    echo " "
+    echo " :.: Процесс загрузки из репозитория"
+    echo "     файла установки $CHOSEN_THEME$ZP:";sleep 0.5
+    cd $TEMP
+    curl -LJO -s $LINK/$CHOSEN_THEME$ZP &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    
+    echo "      Распаковка:";sleep 0.5
+    unzip -d $HOME -q $CHOSEN_THEME$ZP &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+}
+
+
+additional_folders() {
+
+SCRIPTFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/script.zip"
+LOGOSFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/logos.zip"
+ASCIIFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/ascii.zip"
+  
+    cd $TUIDIR && rm -rf script logos ascii
+    echo " "
+    echo " :.:  Добавление папок:";sleep 0.5
+    cd $TEMP
+    curl -LJO -s $SCRIPTFILE -LJO -s $LOGOSFILE -LJO -s $ASCIIFILE && echo "     - загрузка файлов --> успешно" || echo "     - архив ascii.zip  --- ошибка загрузки"
+    
+    echo "      Распаковка:";sleep 0.5
+    unzip -d $TUIDIR -q script.zip && echo "     - папка «script» --- успешно" || echo "     - «script» --- ошибка загрузки"
+    unzip -d $TUIDIR -q logos.zip && echo "     - папка «logos»  --- успешно" || echo "     - «logos» --- ошибка загрузки"
+    unzip -d $TUIDIR -q ascii.zip && echo "     - папка «ascii»  --- успешно" || echo "     - «ascii» --- ошибка загрузки"
+
+    mkdir /storage/emulated/0/t-ui/script_texts
+   SCRPTXT="/storage/emulated/0/t-ui/script_texts" #Folder for script texts
+  
+}
+
+
+add_some_aliases() {
+
+## Add aliases in to alias.txt. Can be supplemented
+
+    echo "mm =sh /storage/emulated/0/mm %">>$TUIDIR/alias.txt
+    echo "mm -p=search -u https://github.com/alexgeorgchist/my_tui/tree/main/database">>$TUIDIR/alias.txt
+    echo "sysinfo=sh /sdcard/t-ui/script/sysinfo %">>$TUIDIR/alias.txt
+    echo "chwf=sh /sdcard//t-ui/script/chwf %">>$TUIDIR/alias.txt
+    echo "aliases=cat /sdcard/t-ui/alias.txt">>$TUIDIR/alias.txt
+    
+    echo "ttm =sh /storage/emulated/0/ttm %">>$TUIDIR/alias.txt
+    echo "ttm -p=search -u https://github.com/M4dGun/t-ui_themes">>$TUIDIR/alias.txt
+
+}
+
+
+add_memo() {
+
+## Add memo script
+
+MEMFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/mem.zip"
+
+    echo " "
+    echo " :.:  Добавление скрипта memo:";sleep 0.5
+    cd $TEMP
+    curl -LJO -s $MEMFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -d $SCRIPTDIR -q mem.zip &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+    
+    echo "memo =sh /storage/emulated/0/t-ui/script/mem %">>$TUIDIR/alias.txt
+   
+}
+
+
+pogoda() {
+
+## Add pogoda script
+
+POGODAFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/pogoda.zip"
+
+    echo " "
+    echo " :.:  Добавление скрипта pogoda:";sleep 0.5
+    cd $TEMP
+    curl -LJO -s $POGODAFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -d $SCRIPTDIR -q pogoda.zip &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+    
+    echo "pogoda =sh /storage/emulated/0/t-ui/script/pogoda %">>$TUIDIR/alias.txt
+   
+}
+
+
+add_troppokoy(){
+
+## Add tropar in to alias.txt
+
+TROPPOKOYFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/troppokoy.zip"
+
+    echo " "
+    echo " :.:  Добавление скрипта troppokoy:";sleep 0.5
+    cd $TEMP
+    curl -LJO -s $TROPPOKOYFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q troppokoy.zip
+    cp -f tropar.txt $SCRPTXT # in to script s texts folder
+    cp -f troppokoy $SCRIPTDIR &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+    echo "troppokoy=sh /storage/emulated/0/t-ui/script/troppokoy %">>$TUIDIR/alias.txt
+
+}
+
+
+add_6psalm() {
+
+## Add 6psalm
+
+PSALMFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/6p.zip"
+
+    echo " "
+    echo " :.:  Добавление скрипта 6p:";sleep 0.5
+    cd $TEMP
+    curl -LJO -s $PSALMFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q 6p.zip
+    cp -f 6psalm.txt $SCRPTXT
+    cp -f 6p $SCRIPTDIR &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+    echo "6p=sh /storage/emulated/0/t-ui/script/6p %">>$TUIDIR/alias.txt
+
+}
+
+
+add_ichs() {
+
+## Add ichs script for some themes to change banners
+## Can be supplemented
+## In the themes in which the banner is printed using <custom_commands>
+
+ICHSFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/ichs.zip"
+aa="lime_limon"
+bb="tomato_silver"
+
+    if [[ "$CHOSEN_THEME" == "$aa" ]] || [[ "$CHOSEN_THEME" == "$bb" ]];then
+    echo " "
+    echo " :.:  Добавление скрипта ichs:";sleep 0.5
+    cd $TEMP
+    curl -LJO -s $ICHSFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q ichs.zip
+    cp -f ichs $SCRIPTDIR &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+    echo "sashaban=sh /storage/emulated/0/t-ui/script/ichs s %">>$TUIDIR/alias.txt
+    echo "tuiban=sh /storage/emulated/0/t-ui/script/ichs t %">>$TUIDIR/alias.txt
+
+    fi
+}
+
+
+remove_tmpfiles() {
+    rm -rf $TEMP
+    echo " "
+    echo " :.:  Папка временных файлов удалена";sleep 0.5
+}
+
+
+
+
+## index=$(($1-1))
+##CHOSEN_THEME="{THEME_LIST[$index]}"
+
+case "$1" in
+    [1-$LIMIT])
+	index=`expr $1 - 1` # Allowed index=$(($1-1))
+	CHOSEN_THEME="${THEME_LIST[$index]}"
+        ;;
+    -l|--list|%)
+        show_theme
+        ;;  
+    -v|--version)
+        version
+        sleep 3.0 && echo " "
+        show_help
+        ;;
+    -h|--help)
+		show_help
+        ;;
+    *)
+        printf " :.: Недействительный аттрибут.\n";sleep 1.0
+        printf " \n"    
+        show_help
+        exit 1
+        ;;
+esac
+
+
+## START PROG HERE
+
+print_header_mmpic
+load_chosen_theme
+additional_folders
+add_some_aliases
+add_memo
+pogoda
+add_troppokoy
+add_6psalm
+add_ichs
+remove_tmpfiles
+print_end
