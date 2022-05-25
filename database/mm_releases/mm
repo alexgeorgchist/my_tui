@@ -16,8 +16,9 @@
 
 SCRIPTNAME=${0##*/}
 
-VER="v.3.02" # Enter data for a new release
-DATERELEASE="24.05.22" # Enter data for a new release
+# Enter data for a new release
+VER="v.3.02"
+DATERELEASE="24.05.22"
 
 ##DIRECTORIES
 HOME="/storage/emulated/0"
