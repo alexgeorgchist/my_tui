@@ -80,7 +80,7 @@ fi
 end_script() {
 if [ $? != 0 ]
     then printf " %s\n" "Что-то не то, надо разобраться"
-    else  printf "%s\n" $line1
+    else  printf " %s\n" $line1
 fi
 exit 0
 }
