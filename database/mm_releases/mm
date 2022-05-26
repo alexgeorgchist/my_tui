@@ -131,7 +131,7 @@ show_theme() {
     padding=-20
 	printf " \n"
 	printf "%s\n" \
-               "My Manager $VER от $DATERELEASE"
+               "     My Manager $VER от $DATERELEASE" \
 	       "$line2"\
                "         СПИСОК ДОСТУПНЫХ ТЕМ:         "
 
