@@ -1,0 +1,66 @@
+#!/bin/sh
+
+## MM - My Manager
+## Author  	: AGCH
+## Github  	: @alexgeorgchist
+
+##################################
+##                              ##
+##       ##   ##  ##   ##       ##
+##   #   ### ###  ### ###   #   ##
+##  ###  ## # ##  ## # ##  ###  ##
+##   #   ##   ##  ##   ##   #   ##
+##       ##   ##  ##   ##       ##
+##                              ##
+##################################
+
+SCRIPTNAME=${0##*/}
+
+home="/storage/emulated/0"
+link="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database/mm_releases/mm"
+line1="============================================="
+padding=23
+
+printf " %s\n" \
+       "$line1" \
+       "• Привет, Сашечка." \
+       "• Программа $SCRIPTNAME обновит скрипт mm" \
+       " "
+sleep 1.5
+       
+
+cd $home
+if [ -f $home/mm ];then rm -rf mm
+    printf " %${padding}s %s\n" \
+              "Заменяемый файл удален" "           ▁ ▂ ▃ ▄ 32% "
+sleep 1.5
+   printf " %${padding}s %s\n" \
+              " " " " \
+              "Загружаю               " "      ▁ ▂ ▃ ▄ ▅ ▆ 68%"
+sleep 1.5
+fi
+curl -o mm -s $link
+    printf " %${padding}s %s\n" \
+              " " " "\
+              "Обновление загружено"  "    ▁ ▂ ▃ ▄ ▅ ▆ ▇ █ 100%" \
+              " "
+sleep 0.5
+              
+a=`sed -n '20p' < mm`
+b=`sed -n '21p' < mm`
+    printf " %s\n" $a \
+                            $b \
+                            $line1
+sleep 1.5
+                            
+## Start mm script
+if [ -f $home/mm ]
+    then  sh ./mm -l
+    else exit 0
+fi
+
+# no delete, in mm script show_theme exit 77
+#if [ $? = 66 ]
+#then echo " ok"
+#else echo " not 0"
+#fi
