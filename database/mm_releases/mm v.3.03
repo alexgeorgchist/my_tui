@@ -415,8 +415,6 @@ case "$1" in
         ;;  
     -v|--version)
         version
-        sleep 3.0 && echo " "
-        show_help
         ;;
     -h|--help)
 		show_help
