@@ -131,8 +131,9 @@ show_theme() {
     padding=-20
 	printf " \n"
 	printf "%s\n" \
-	    "$line2"\
-        "         СПИСОК ДОСТУПНЫХ ТЕМ:         "
+               "My Manager $VER от $DATERELEASE"
+	       "$line2"\
+               "         СПИСОК ДОСТУПНЫХ ТЕМ:         "
 
 VAR=1 # Number of topics in the array list LIMIT=${#THEME_LIST[@]}
 while [ "$VAR" -le "$LIMIT" ] # <=
