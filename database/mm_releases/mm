@@ -128,7 +128,7 @@ show_theme() {
 
     print_header_mmpic
     sleep 0.5
-    padding=-20
+    padding=-44
 	printf " \n"
 	printf "%s\n" \
                "     My Manager $VER от $DATERELEASE" \
