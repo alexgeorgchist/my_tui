@@ -1,0 +1,91 @@
+#!/bin/sh
+
+## MM - My Manager
+## Author  	: AGCH
+## Github  	: @alexgeorgchist
+
+##################################
+##                              ##
+##       ##   ##  ##   ##       ##
+##   #   ### ###  ### ###   #   ##
+##  ###  ## # ##  ## # ##  ###  ##
+##   #   ##   ##  ##   ##   #   ##
+##       ##   ##  ##   ##       ##
+##                              ##
+##################################
+
+SCRIPTNAME=${0##*/}
+
+home="/storage/emulated/0"
+link="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database/mm_releases"
+line1="============================================="
+line2="---------------------------------------------"
+ERROR="Что-то не то, надо разобраться"
+padding=23
+
+
+
+print_head() {
+    printf " %s\n" \
+              "$line1" \
+              "• Привет, Сашечка." \
+              "• Программа $SCRIPTNAME обновит скрипт mm" \
+              "$line2"
+    sleep 1.5
+}
+
+
+give_me_mm() {       
+cd $home
+if [ -f $home/mm ];then rm -rf mm
+fi
+    printf " %${padding}s %s\n" \
+              "Заменяемый файл удален" "           ▁ ▂ ▃ ▄ 32% "
+    sleep 1.5
+    printf " %${padding}s %s\n" \
+              " " " " \
+              "Загружаю               " "      ▁ ▂ ▃ ▄ ▅ ▆ 68%"
+    sleep 1.5
+
+curl -o mm -s $link/mm
+
+    printf " %${padding}s %s\n" \
+              " " " "\
+              "Обновление загружено"  "    ▁ ▂ ▃ ▄ ▅ ▆ ▇ █ 100%" \
+              " "
+    sleep 0.5
+              
+#a=`sed -n '20p' < mm` #read 20line in the mm
+#b=`sed -n '21p' < mm` #read 20line in the mm
+#   printf " %s\n" $a \
+#                          $b \
+#                          $line1
+
+}
+
+
+goto_mm() {                           
+## Start mm script
+if [ $? = 0 ] && [ -f $home/mm ]
+    then  sh ./mm -v
+    else printf " %s\n" &ERROR
+fi
+if [ $? = 77 ] # in the mm script version exit 77
+    then printf " %s\n\n" $line1
+             sleep 2.0
+             sh ./mm -h
+    else printf " %s\n" &ERROR
+fi    
+}
+
+
+print_end() {
+if [ $? != 55 ] # in the mm script show_help exit 55
+    then printf " %s\n" $ERROR
+fi
+}
+
+print_head
+give_me_mm
+goto_mm
+print_end
