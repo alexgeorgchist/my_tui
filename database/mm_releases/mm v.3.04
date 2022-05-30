@@ -1,0 +1,445 @@
+#!/bin/sh
+
+## MM - My Manager
+## Author  	: AGCH ( thanks to EMA,Dedrabbit and guys )
+## Github  	: @alexgeorgchist
+
+##################################
+##                              ##
+##       ##   ##  ##   ##       ##
+##   #   ### ###  ### ###   #   ##
+##  ###  ## # ##  ## # ##  ###  ##
+##   #   ##   ##  ##   ##   #   ##
+##       ##   ##  ##   ##       ##
+##                              ##
+##################################
+
+SCRIPTNAME=${0##*/}
+
+# Enter data for a new release
+VER="v.3.04"
+DATERELEASE="30.05.22"
+
+##DIRECTORIES
+HOME="/storage/emulated/0"
+TUIDIR="/storage/emulated/0/t-ui"
+SCRIPTDIR="/storage/emulated/0/t-ui/script"
+ASCIIDIR="/storage/emulated/0/t-ui/ascii"
+LOGODIR="/storage/emulated/0/t-ui/logo"
+
+TUI="t-ui"
+ZP=".zip"
+line1="============================================="
+line2=----------------------------------------------
+
+padding=-22
+PERCENT1="                  ▋8%"
+PERCENT2="                 ▋▋11%"
+PERCENT3="                ▋▋▋15%"
+PERCENT4="               ▋▋▋▋18%"
+PERCENT5="              ▋▋▋▋▋26%"
+PERCENT6="             ▋▋▋▋▋▋34%"
+PERCENT7="            ▋▋▋▋▋▋▋45%"
+PERCENT8="           ▋▋▋▋▋▋▋▋52%"
+PERCENT9="          ▋▋▋▋▋▋▋▋▋60%"
+PERCENT10="         ▋▋▋▋▋▋▋▋▋▋74%"
+PERCENT11="        ▋▋▋▋▋▋▋▋▋▋▋88%"
+PERCENT12="       ▋▋▋▋▋▋▋▋▋▋▋▋100%"
+
+## LINK
+LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes_zip_arhive"
+
+## GET THEME LIST
+ABCD="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database/theme_list.txt"
+    cd $HOME && curl -o list.txt -s $ABCD
+    ppp=list.txt
+    THEME_LIST=(`cat "$ppp"`)
+    LIMIT=${#THEME_LIST[@]} #Number of topics in the array list
+    rm -rf $ppp
+
+
+
+print_header_mmpic() {
+mmpic="$ASCIIDIR/mmpic.txt"
+if [[ ! -f $mmpic ]]
+    then
+    cd $HOME
+    curl -LJO -s https://github.com/alexgeorgchist/my_tui/raw/main/database/files_for_tui/mmpic.zip
+    unzip -d $HOME -q mmpic.zip
+    printf "%s \n"
+    cat $HOME/mmpic.txt
+    rm -rf mmpic.txt mmpic.zip
+    else
+    printf " \n"
+    cat $ASCIIDIR/mmpic.txt
+fi
+    
+}
+
+
+print_end () {
+
+    printf " \n"
+    printf "%s\n" \
+        "$line1"\
+        "           $SCRIPTNAME - Тема «$CHOSEN_THEME»   "\
+        "              успешно установлена.   " \
+        " " \
+        "              Перезагрузите «T-UI» " \
+        " " \
+        "$line1"
+    
+    printf " \n\n"
+    exit 0
+    
+}
+
+
+show_help() {
+    
+	padding=-18
+	print_header_mmpic
+	printf "%s\n" $line2
+	printf " %${padding}s%s\n" \
+	    ":.: Как пользоваться:" " "\
+	    " " " "\
+        "[-h, --help]" "[1,2 или 3... до $LIMIT]"\
+        "[-l, --list]" "[-v, --version]" \
+        " "
+    printf " %${padding}s%s\n" \
+	    "от 1 до $LIMIT" "    => Установка темы" \
+        "-l, --list" "=> Показать доступные темы" \
+        "-h, --help" "=> Справка по использованию" \
+        "-v, --version" "=> Версия программы" \
+        " "     
+	printf "%s\n" $line2
+    printf " %${padding}s%s\n" \
+              ":.: Примечание: " "  Набрать $SCRIPTNAME," \
+              " " "далее выбранный" \
+              " " "аттрибут через пробел."
+    printf "%s\n" $line2
+        
+	exit 55 # for mmload script
+	
+}
+
+
+show_theme() {
+
+    print_header_mmpic
+    sleep 0.5
+    padding=-44
+	printf " \n"
+	printf "%s\n" \
+               "     My Manager $VER от $DATERELEASE" \
+	       "$line2"\
+               "         СПИСОК ДОСТУПНЫХ ТЕМ:         "
+
+VAR=1 # Number of topics in the array list LIMIT=${#THEME_LIST[@]}
+while [ "$VAR" -le "$LIMIT" ] # <=
+do
+    echo "   $VAR. ${THEME_LIST[$VAR-1]}"
+    VAR=`expr $VAR + 1` # Allowed VAR=$(($VAR+1)) or let "VAR += 1"
+done
+
+	printf "%s\n" \
+	    "$line2"
+	sleep 0.5
+	printf " %s\n " \
+		" :.: Для установки набрать: mm номер" \
+		"    Пример: mm 5 [ загрузка sunny_walk ] " \
+	    " " \
+		":.: mm -h    -- вызов справки"
+		
+    exit 66 # for mmload script
+    
+}
+
+
+version() {
+
+	printf " %s\n" \
+	          " " \
+              ":.: $SCRIPTNAME - My Manager ( themes for t-ui )" \
+	          ":.: Версия программы  $VER от $DATERELEASE "
+	
+	exit 77 #for mmload script
+}
+
+
+load_chosen_theme() {
+
+cd $HOME && rm -rf $TUI
+
+if [[ ! -d TEMP ]]
+    then mkdir /storage/emulated/0/TEMP && echo " :.: Создана папка для временных файлов"
+    else rm -rf /storage/emulated/0/TEMP && mkdir /storage/emulated/0/TEMP && echo " :.: Назначена папка для временных файлов"
+fi
+    TEMP="/storage/emulated/0/TEMP" #TMP folder for temporary files
+    printf "%s\n" " :.: Файл установки $CHOSEN_THEME$ZP:"
+    cd $TEMP
+    curl -LJO -s $LINK/$CHOSEN_THEME$ZP &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -d $HOME -q $CHOSEN_THEME$ZP &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT1"
+    printf " \n"
+
+}
+
+
+additional_folders() {
+
+SCRIPTFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/script.zip"
+LOGOSFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/logos.zip"
+ASCIIFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/ascii.zip"
+  
+    cd $TUIDIR && rm -rf script logos ascii
+    printf "%s\n" " :.:  Добавление папок:"
+    cd $TEMP
+    curl -LJO -s $SCRIPTFILE -LJO -s $LOGOSFILE -LJO -s $ASCIIFILE && echo "     - загрузка файлов --> успешно" || echo "     - архив ascii.zip  --- ошибка загрузки"
+    
+    printf "%s\n" "      Распаковка:"
+    unzip -d $TUIDIR -q script.zip && echo "     - папка «script» --> успешно" || echo "     - «script» --- ошибка загрузки"
+
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT2"              
+    unzip -d $TUIDIR -q logos.zip && echo "     - папка «logos»  --> успешно" || echo "     - «logos» --- ошибка загрузки"
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT3"              
+    unzip -d $TUIDIR -q ascii.zip && echo "     - папка «ascii»  --> успешно" || echo "     - «ascii» --- ошибка загрузки"
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT4"
+    printf " \n"
+    
+    mkdir $TUIDIR/script_texts
+    SCRIPTTXT="/storage/emulated/0/t-ui/script_texts" #Folder for script texts
+  
+}
+
+
+add_some_aliases() {
+
+## Add aliases in to alias.txt. Can be supplemented
+
+    echo "mm =sh /storage/emulated/0/mm %">>$TUIDIR/alias.txt
+    echo "mm -p=search -u https://github.com/alexgeorgchist/my_tui/tree/main/database">>$TUIDIR/alias.txt
+    echo "sysinfo=sh /sdcard/t-ui/script/sysinfo %">>$TUIDIR/alias.txt
+    echo "chwf=sh /sdcard//t-ui/script/chwf %">>$TUIDIR/alias.txt
+    echo "aliases=cat /sdcard/t-ui/alias.txt">>$TUIDIR/alias.txt
+    
+    echo "ttm =sh /storage/emulated/0/ttm %">>$TUIDIR/alias.txt
+    echo "ttm -p=search -u https://github.com/M4dGun/t-ui_themes">>$TUIDIR/alias.txt
+
+}
+
+
+add_memo() {
+
+## Add memo script
+
+MEMFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/mem.zip"
+
+    printf "%s\n" " :.:  Добавление скрипта memo:"
+    cd $TEMP
+    curl -LJO -s $MEMFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -d $SCRIPTDIR -q mem.zip &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT5"
+    printf " \n"
+              
+    sed -i '1s/^/memo =sh \/storage\/emulated\/0\/t-ui\/script\/mem %\n/' $TUIDIR/alias.txt #Add memo alias in to 1 string
+}
+
+
+pogoda() {
+
+## Add pogoda script
+
+POGODAFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/pogoda.zip"
+
+    printf "%s\n" " :.:  Добавление скрипта pogoda:"
+    cd $TEMP
+    curl -LJO -s $POGODAFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -d $SCRIPTDIR -q pogoda.zip &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+      
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT6"
+    printf " \n"
+              
+    sed -i '2s/^/☂=sh \/storage\/emulated\/0\/t-ui\/script\/pogoda %\n/' $TUIDIR/alias.txt #Add weather alias in to 2 string
+   
+}
+
+
+add_troppokoy(){
+
+## Add tropar in to alias.txt
+
+TROPPOKOYFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/troppokoy.zip"
+
+    printf "%s\n" " :.:  Добавление скрипта troppokoy:"
+    cd $TEMP
+    curl -LJO -s $TROPPOKOYFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q troppokoy.zip
+    cp -f tropar.txt $SCRIPTTXT # in to script s texts folder
+    cp -f troppokoy $SCRIPTDIR &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT7"
+    printf " \n"
+              
+    echo "troppokoy=sh /storage/emulated/0/t-ui/script/troppokoy %">>$TUIDIR/alias.txt
+
+}
+
+
+add_6psalm() {
+
+## Add 6psalm
+
+PSALMFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/6p.zip"
+
+    printf "%s\n" " :.:  Добавление скрипта 6p:"
+    cd $TEMP
+    curl -LJO -s $PSALMFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q 6p.zip
+    cp -f 6psalm.txt $SCRIPTTXT
+    cp -f 6p $SCRIPTDIR &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+    
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT8"
+    printf " \n"
+              
+    echo "6p=sh /storage/emulated/0/t-ui/script/6p %">>$TUIDIR/alias.txt
+
+}
+
+
+add_ichs_banner() {
+
+## Add ichs script for some themes to change banners
+## Can be supplemented
+## In the themes in which the banner is printed using <custom_commands>
+
+ICHSFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/ichs.zip"
+aa="lime_limon"
+bb="sunny_walk"
+cc="tomato_silver"
+
+    if [[ "$CHOSEN_THEME" == "$aa" || "$CHOSEN_THEME" == "$bb" || "$CHOSEN_THEME" == "$cc" ]] ;then
+    printf "%s\n" " :.:  Добавление скрипта ichs:"
+    cd $TEMP
+    curl -LJO -s $ICHSFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q ichs.zip
+    cp -f ichs $SCRIPTDIR &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT9"
+    printf " \n"
+              
+    echo "sashaban=sh /storage/emulated/0/t-ui/script/ichs s %">>$TUIDIR/alias.txt
+    echo "tuiban=sh /storage/emulated/0/t-ui/script/ichs t %">>$TUIDIR/alias.txt
+
+    fi
+}
+
+
+add_optina() {
+
+## Add memo script
+
+OPTFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/optina.zip"
+
+    printf "%s\n" " :.:  Добавление скрипта optina:"
+    cd $TEMP
+    curl -LJO -s $OPTFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q optina.zip &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+    cp -f optina.txt $SCRIPTTXT
+    cp -f optina $SCRIPTDIR
+
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT10"
+    printf " \n"
+              
+#    echo "optina=sh /storage/emulated/0/t-ui/script/optina %">>$TUIDIR/alias.txt
+    sed -i '3s/^/optina =sh \/storage\/emulated\/0\/t-ui\/script\/optina %\n/' $TUIDIR/alias.txt #Add optina alias in to 3 string
+}
+
+
+add_deti() {
+
+## Add deti molitvy script
+
+DETIFILE="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts/deti.zip"
+
+    printf "%s\n" " :.:  Добавление скрипта deti:"
+    cd $TEMP
+    curl -LJO -s $DETIFILE &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+    unzip -q deti.zip &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+    cp -f deti.txt $SCRIPTTXT
+    cp -f deti $SCRIPTDIR
+
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT11"
+    printf " \n"
+              
+    sed -i '4s/^/deti =sh \/storage\/emulated\/0\/t-ui\/script\/deti %\n/' $TUIDIR/alias.txt #Add deti alias in to 4 string
+#    echo "deti=sh /storage/emulated/0/t-ui/script/deti %">>$TUIDIR/alias.txt
+}
+
+
+remove_tmpfiles() {
+    rm -rf $TEMP
+    printf "%s\n" " :.:  Папка временных файлов удалена" \
+               " "
+    printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT12"
+
+}
+
+
+
+
+## index=$(($1-1))
+##CHOSEN_THEME="{THEME_LIST[$index]}"
+
+case "$1" in
+    [1-$LIMIT])
+	index=`expr $1 - 1` # Allowed index=$(($1-1))
+	CHOSEN_THEME="${THEME_LIST[$index]}"
+        ;;
+    -l|--list|%)
+        show_theme
+        ;;  
+    -v|--version)
+        version
+        ;;
+    -h|--help)
+		show_help
+        ;;
+    *)
+        printf " :.: Недействительный аттрибут.\n";sleep 1.0
+        printf " \n"    
+        show_help
+        exit 1
+        ;;
+esac
+
+
+## START PROG HERE
+
+print_header_mmpic
+load_chosen_theme
+additional_folders
+add_memo
+add_some_aliases
+pogoda
+add_troppokoy
+add_6psalm
+add_ichs_banner
+add_optina
+add_deti
+remove_tmpfiles
+print_end
