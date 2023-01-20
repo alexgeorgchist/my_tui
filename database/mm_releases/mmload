@@ -78,7 +78,7 @@ if [ $? = 0 ] && [ -f $home/mm ]
         if [ $? = 77 ] # look in the mm script version exit 77
             then printf " %s\n\n" $line1
                 sleep 1.5 && sh ./mm -h
-        else printf " %s\n" &ERROR
+        else printf " %s\n" $ERROR
 fi
 fi
 }
