@@ -1,0 +1,70 @@
+#!/bin/sh
+
+SCRIPTNAME=${0##*/}
+
+line1="----------------------------------------------"
+line2="=============================================="
+TXTDIR="/storage/emulated/0/t-ui/script_texts"
+FILE="/storage/emulated/0/t-ui/script_texts/deti.txt"
+
+print_header() {
+    printf "%s\n" \
+              $line2 \
+              "              Молитвы о детях." \
+              $line2
+}
+     
+     
+print_file () {
+a1="крестнике"
+b1="Крестьянкина"
+c1="Богородице"
+d1="Хранителю"
+e1="Аминь."
+f1="Молитва"
+DOT="•"
+
+    cd $TXTDIR
+while IFS= read -r string; do
+    a2=`echo $string | tail -c 19`   # 9letters*2 + 1 = 19
+    b2=`echo $string | tail -c 25`   # 12letters*2 + 1= 25
+    c2=`echo $string | tail -c 21`   # 10letters*2 + 1 = 21
+    d2=`echo $string | tail -c 19`   # 9letters*2 +1 = 19
+    e2=`echo $string | tail -c 12`   # 5letters*2 +dot[1] + 1 = 12
+    f2=`echo $string | head -c 14` # 7letters*2 + 1 = 15
+
+if [ "$f2" = "$f1" ]; then printf " $DOT "; fi
+if [ "$x" = 1 ]
+    then echo "$string" | awk '{print toupper($0)}' #small text to BIG text
+    else echo "$string"
+fi
+
+ 
+if [ "$a2" = "$a1" ] || [ "$b2" = "$b1" ] || [ "$c2" = "$c1" ] || [ "$d2" = "$d1" ]
+    then printf "%s\n" \
+                       " "
+    elif [ "$e2" = "$e1" ]
+    then printf "%25s%s\n" \
+                       "***"
+    else continue
+fi   
+
+done < deti.txt 
+}
+
+
+
+## Choosing a print option
+case "$1" in
+        1)
+            x=1
+            print_header
+            print_file
+            ;;
+        *)
+            x=0
+            print_header
+            print_file
+            ;;
+esac
+   

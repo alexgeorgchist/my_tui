@@ -1,0 +1,30 @@
+#!/bin/sh
+
+home="/storage/emulated/0"
+tui="/storage/emulated/0/t-ui"
+a='<custom_command value="cat /sdcard/t-ui/ascii/tui.txt"/>'
+b='<custom_command value="cat /sdcard/t-ui/ascii/sasha.txt"/>'
+
+
+case "$1" in
+    1|s)
+		cd $tui
+        sed 's/tui*/sasha/g' expert.xml | tee zzz.xml
+		rm -rf expert.xml && mv zzz.xml expert.xml
+        ;;
+    2|t)
+        cd $tui
+        sed 's/sasha*/tui/g' expert.xml | tee zzz.xml
+        rm -rf expert.xml && mv zzz.xml expert.xml
+        ;;
+        *)
+        echo "==============================================="
+        echo "                  ДАЮ СПРАВКУ:"
+        echo "    набрать sh ichs s[1] или sh ichs t[2]"
+        echo "    1 = tui --> sasha, 2 = sasha --> tui"
+        echo "==============================================="
+        ;;
+esac
+
+
+
