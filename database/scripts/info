@@ -88,7 +88,7 @@ fi
 if [ "$DATENOW" -ge "$BEGINDAYMAMA" ] && [ "$DATENOW" -le 135 ] # >=116 && <=135
      then let "MREAD = $M + 1"
          elif [ "$DATENOW" -ge 136 ] && [ "$DATENOW" -le 155 ] # >=136 && <=155
-             then let "MREAD = $M - 19" # $P - 1 + 20
+             then let "MREAD = $M - 19" # $P + 1 - 20
                  elif [ "$DATENOW" -ge 156 ] # >=156
                      then let "X = $DATENOW - 365" && let "MREAD = $X - $BEGINDAYMAMA"
                          elif [ "$M" -eq -1 ] # = -1
