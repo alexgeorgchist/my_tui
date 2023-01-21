@@ -70,14 +70,14 @@ DATENOW=`date +%j` #Number day of the year xxx-format
 let "P = $DATENOW - $BEGINDAYPAPA"
 let "M = $DATENOW - $BEGINDAYMAMA"
 
-PREAD="$P" # How days from the begin to read
-MREAD="$M" # How days from the begin to read
+PREAD="$P" # which days from the begin to read
+MREAD="$M" # which days from the begin to read
 
 # Papa
 if [ "$DATENOW" -ge "$BEGINDAYPAPA" ] && [ "$DATENOW" -le 85 ] # >=66 &&<=85
      then let "PREAD = $P + 1"
          elif [ "$DATENOW" -ge 86 ] && [ "$DATENOW" -le 105 ] # >=86 && <=105
-             then let "PREAD = $P - 19" # $P - 1 + 20
+             then let "PREAD = $P - 19" # $P + 1 - 20
                  elif [ "$DATENOW" -ge 106 ]
                      then let "X = $DATENOW - 365" && let "PREAD = $X - $BEGINDAYPAPA"
                          elif [ "$P" -eq -1 ] # = -1
