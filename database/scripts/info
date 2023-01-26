@@ -1,7 +1,7 @@
 #!/system/bin/sh
 ## Author  	: AGCH
 ## Github  	: @alexgeorgchist
-## 17.01.2023
+## 26.01.2023
 ## Thanks to @deadrabbit404
 
 PROGNAME=${0##*/}
