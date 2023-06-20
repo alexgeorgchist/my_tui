@@ -1,0 +1,187 @@
+#!/system/bin/sh
+
+# By: DeadRabbit
+# Telegram: @deadrabbit404
+
+PROGNAME=${0##*/}
+LOGODIR="/sdcard/t-ui/logos"
+LOGO="android_sanyo"
+BRAND=`getprop ro.product.brand`
+MODEL=`getprop ro.product.model`
+CODENAME=`getprop ro.product.device`
+ANDROID_VERSION=`getprop ro.build.version.release`
+CPUARCH=`getprop ro.product.cpu.abi`
+CPUCORE=`grep -c "^processor" /proc/cpuinfo`
+CPUFREQ=`< /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq`
+MEMTOTAL=`grep MemTotal /proc/meminfo | awk '{ print $2 }'`
+MEMAVAIL=`grep MemAvail /proc/meminfo | awk '{ print $2 }'`
+ZRAM=`grep SwapTotal /proc/meminfo | awk '{ print $2 }'`
+KERNEL=`uname -r | cut -f 1 -d "/"`
+PATCH=`getprop ro.build.version.security_patch`
+DATA_ENCRYPTION=`getprop ro.crypto.state`
+
+# Truncate those having 0 values from output of `uptime -p`
+UPTIME=`uptime -p | sed "s/ 0 [^ ]*,//g" | sed "s/up //" | sed "s/week/нед./" | sed "s/hours/час./" | sed "s/hour/час./" | sed "s/minutes/мин./"`
+
+# Determine SELinux status without root access
+cat /sys/fs/selinux/enforce >/dev/null 2>&1
+[ $? -eq 0 ] && SELINUX="Permissive" || SELINUX="Enforcing"
+
+
+get_public_ip () {
+    ip=`curl -s ifconfig.me`
+    ip=${ip:="<Unkown>"}
+    echo "$ip"
+}
+
+print_sysinfo () {
+# Print all the information
+    padding=32
+    printf "  %-${padding}s : %s\n"\
+        "Phone Model" "$BRAND $MODEL"\
+        "Codename" "$CODENAME"\
+        "OS Type" "Android $ANDROID_VERSION ($CPUARCH)"\
+        "Security Patch" "$PATCH"\
+        "/data Status" "$DATA_ENCRYPTION"\
+        "SELinux" "$SELINUX"\
+        "CPU" "$CPUCORE core(s) @ $((CPUFREQ/1000))MHz"\
+        "Memory" "$((MEMAVAIL/1024)) Мб / $((MEMTOTAL/1024)) Мб"\
+        "zRAM Size" "$((ZRAM/1024)) Мб"\
+        "Kernel" "$KERNEL"\
+        "Uptime" "$UPTIME"\
+        " " " "
+#        printf "%${padding}s : %s\n" "Public IPv4" `get_public_ip`
+}
+
+#Read psalms for everydays
+everyday_psalm () {
+DIR="/storage/emulated/0//t-ui/script_texts"
+TXT1="$DIR/numdate.txt"
+TXT2="$DIR/numpsalm.txt"
+NOWTIME=`date +%j` #Number day of the year (001-365)
+if [[ ! -f $TXT1 ]] || [[ ! -f $TXT2 ]]
+    then echo " !!! Надо вписать номер сегодняшней кафизмы в numpsalm.txt в папке script_texts"
+             echo $NOWTIME > $DIR/numdate.txt
+             echo 1 > $DIR/numpsalm.txt
+fi
+LASTTIME=`cat $DIR/numdate.txt`
+    let "RAZN = $NOWTIME - $LASTTIME"
+
+LASTPSALM=`cat $DIR/numpsalm.txt`
+    let "PSALM = $LASTPSALM + $RAZN"
+
+if [ "$PSALM" -gt 20 ] # >20
+    then let "PSALM = $PSALM - 20"
+fi
+
+echo $NOWTIME > $DIR/numdate.txt
+echo $PSALM > $DIR/numpsalm.txt
+
+    padding=32
+    printf "  %-${padding}s : %s\n"\
+              "Today kafisma to read" "$PSALM кафисма"
+}
+
+
+
+# !!! Read Psaltir
+psaltir_papa_mama () {
+
+DATENOW=`date +%j` #Number day of the year xxx-format
+
+# Papa
+BEGINDAYPAPA=60      # Day of the begin to read psaltir papa=66!!! because before STRASNAYA
+let "PKRUG1 = $BEGINDAYPAPA + 20"
+let "PKRUG2 = $BEGINDAYPAPA +40"
+let "P = $DATENOW - $BEGINDAYPAPA"
+PREAD="$P" # which days from the begin to read
+
+if [ "$DATENOW" -ge "$BEGINDAYPAPA" ] && [ "$DATENOW" -lt "$PKRUG1" ] # >=60 &&<80
+     then let "PREAD = $P + 1"
+         elif [ "$DATENOW" -ge "$PKRUG1" ] && [ "$DATENOW" -lt "$PKRUG2" ] # >=80 && <100
+             then let "PREAD = $P - 19" # $P + 1 - 20
+                 elif [ "$DATENOW" -ge "PKRUG2" ]
+                     then let "X = $DATENOW - 365" && let "PREAD = $X - $BEGINDAYPAPA"
+                         elif [ "$P" -eq -1 ] # = -1
+                             then PREAD="zavtra"
+fi
+     
+#Mama
+BEGINDAYMAMA=116 # Day of the begin to read psaltir mama=116
+let "MKRUG1 = $BEGINDAYMAMA + 20"
+let "MKRUG2 = $BEGINDAYMAMA +40"
+let "M = $DATENOW - $BEGINDAYMAMA"
+MREAD="$M" # which days from the begin to read
+
+if [ "$DATENOW" -ge "$BEGINDAYMAMA" ] && [ "$DATENOW" -lt "$MKRUG1" ] # >=116 && <136
+     then let "MREAD = $M + 1"
+         elif [ "$DATENOW" -ge "$MKRUG1" ] && [ "$DATENOW" -lt "$MKRUG2" ] # >=136 && <156
+             then let "MREAD = $M - 19" # $P + 1 - 20
+                 elif [ "$DATENOW" -ge "$MKRUG2" ] # >=156
+                     then let "X = $DATENOW - 365" && let "MREAD = $X - $BEGINDAYMAMA"
+                         elif [ "$M" -eq -1 ] # = -1
+                             then MREAD="zavtra"
+fi
+
+padding=32
+PREAD=`echo $PREAD | sed "s/-//"` # delete minus in the number
+MREAD=`echo $MREAD | sed "s/-//"` # delete minus in the mumber
+printf "  %-${padding}s : %s\n"\
+          "Papa days before the start " "$PREAD дн."\
+          "Mama days before the start" "$MREAD дн."
+                 
+}
+
+
+sorokoust () {
+D=`date +%j`
+let "DD = $D - 126" # Set 126 or another for a first day
+N="Valentina"
+
+padding=32
+if [ "$DD" -ge 1 ] && [ "$DD" -le 40 ] # >=1 & <=40
+    then printf "  %-${padding}s : %s\n"\
+                       "$N" "$DD day out of 40" # Set name
+        
+fi
+}
+
+notes () {
+TUI="/storage/emulated/0/t-ui"
+cd $TUI
+    NOTEFILE=$(sed -e 's/<?xml version="1.0" encoding="UTF-8"?>//; s/<NOTES>//; s/<note creationTime="//; s/" value="//; s/" lock="false"\/>//; s/<\/NOTES>//; s/^............./✓ /g' notes.xml)
+    echo $NOTEFILE > notefile.txt
+    abc=notefile.txt
+    
+if [ -z "$( cat ${abc} )" ]  # if line in the file is empty
+    then bottom_skobka
+    else printf "  ЗАМЕТКИ : "
+            cat notefile.txt
+fi
+}
+
+top_skobka () {
+printf "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓­­­­­­­­­­\n"
+}
+
+bottom_skobka () {
+printf "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n"
+exit 0
+}
+
+
+# Script menu
+top_skobka
+print_sysinfo
+everyday_psalm
+psaltir_papa_mama
+sorokoust
+notes
+bottom_skobka
+
+
+
+
+
+
+
