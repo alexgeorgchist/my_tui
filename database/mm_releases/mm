@@ -157,7 +157,7 @@ sleep 0.5; printf "%${padding}s%s\n" \
               " Прогресс выполнения: " "$PERCENT2"
     echo " :.: Создана папка для тем tui"
 fi
-    temp="/storage/emulated/0/TUI_TEMP"
+    temp="/storage/emulated/0/TEMP"
     cd $temp
 sleep 0.5; printf "%${padding}s%s\n" \
               " Прогресс выполнения: " "$PERCENT3"
