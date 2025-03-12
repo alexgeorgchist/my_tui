@@ -225,5 +225,5 @@ esac
 
 print_header_mmpic
 load_chosen_theme
-remove_tmpfiles
+#remove_tmpfiles
 print_end
