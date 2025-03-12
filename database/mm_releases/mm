@@ -48,7 +48,7 @@ LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes"
 ALL="all_themes.zip"
 
 ## GET THEME LIST
-    THEME_LIST=(aqua 2023yoyo 2024 yellow_plum gold_icons purplefon)
+    THEME_LIST=(aqua 2024 2025 yellow_plum gold_icons purplefon)
     LIMIT=${#THEME_LIST[@]} #Number of topics in the array list
 
 
