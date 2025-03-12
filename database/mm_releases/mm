@@ -148,23 +148,44 @@ version() {
 
 load_chosen_theme() {
 cd $HOME && rm -rf $TUI
-if [[ ! -d TUI_THEMES ]]
-    then mkdir /storage/emulated/0/TUI_THEMES
-    else rm -rf /storage/emulated/0/TUI_THEMES && mkdir /storage/emulated/0/TUI_THEMES
+printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT1"
+if [[ ! -d TEMP ]]
+    then mkdir /storage/emulated/0/TEMP
+    else rm -rf /storage/emulated/0/TEMP && mkdir /storage/emulated/0/TEMP
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT2"
     echo " :.: Создана папка для тем tui"
 fi
-    TEMA="/storage/emulated/0/TUI_THEMES"
-    cd $TEMA
+    temp="/storage/emulated/0/TUI_TEMP"
+    cd $temp
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT3"
     printf " Скачивание... \n"
-    curl -LJO -s $LINK/$ALL && unzip $ALL
-#    curl -LJO -s $LINK/$CHOSEN_THEME$ZP &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT4"
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT5"
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT6"	      
+    curl -LJO -s $LINK/$CHOSEN_THEME$ZP &&  echo "     - загрузка --> успешно" || echo "     - ошибка загрузки"
     unzip -d $HOME -q $CHOSEN_THEME$ZP &&  echo "     - распаковка --> успешно" || echo "     - ошибка распаковки"
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT7" 
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT8"	      
     echo "mm =sh /storage/emulated/0/mm %">>$TUIDIR/alias.txt
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT9"    
 }
 
 
 remove_tmpfiles() {
-    rm -rf $TEMP
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT10"
+    rm -rf $temp
+sleep 0.5; printf "%${padding}s%s\n" \
+              " Прогресс выполнения: " "$PERCENT11"    
     printf "%s\n" " :.:  Папка временных файлов удалена" \
                " "
     printf "%${padding}s%s\n" \
