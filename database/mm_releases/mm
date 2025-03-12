@@ -183,7 +183,7 @@ sleep 0.5; printf "%${padding}s%s\n" \
               " Прогресс выполнения: " "$PERCENT8"\
 	      ""
     echo "mm =sh /storage/emulated/0/mm %">>$TUIDIR/alias.txt
-sleep 0.5; printf "%${padding}s%s\nn" \
+sleep 0.5; printf "%${padding}s%s\n" \
               " Прогресс выполнения: " "$PERCENT9" \
 	      ""
 }
