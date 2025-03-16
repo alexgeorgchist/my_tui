@@ -17,8 +17,8 @@
 SCRIPTNAME=${0##*/}
 
 # Enter data for a new release
-VER="v.5.04"
-DATERELEASE="14.03.25"
+VER="v.6.01"
+DATERELEASE="17.03.25"
 
 ##DIRECTORIES
 HOME="/storage/emulated/0"
@@ -50,7 +50,7 @@ LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes"
 mmpiclink="https://raw.github.com/alexgeorgchist/my_tui//main/database/files_for_tui/mmpic.txt"
 
 ## GET THEME LIST
-THEME_LIST=(aqua 2024 2025 yellow_plum gold_icons purplefon) # Massiv tem
+THEME_LIST=(aqua purplefon 2024 2025) # Massiv tem
 LIMIT=${#THEME_LIST[@]} #Number of topics in the array list
 
 
