@@ -18,7 +18,7 @@ SCRIPTNAME=${0##*/}
 
 home="/storage/emulated/0"
 link="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database"
-scriptman="https://raw.github.com/alexgeorgchist/my_tui//main/database/scriptman"
+scriptman="https://raw.github.com/alexgeorgchist/my_tui//main/database/scriptman.sh"
 line1="============================================="
 line2="---------------------------------------------"
 ERROR="Что-то не то, надо разобраться"
@@ -29,15 +29,15 @@ print_head() {
     printf " %s\n" \
               "$line1" \
               "• Привет, Сашечка." \
-              "• Программа $SCRIPTNAME обновит ( восстановит ) скрипт mm" \
+              "• Программа $SCRIPTNAME обновит ( восстановит ) скрипт mm.sh" \
               "$line2"
     sleep 1.5
 }
 
 givme_mm_scriptman() {       
 cd $home
-if [ -f $home/mm ]; then rm -rf mm
-elif [ -f $home/scriptman ]; then scriptman
+if [ -f $home/mm.sh ]; then rm -rf mm.sh
+elif [ -f $home/scriptman.sh ]; then scriptman
     block1 && block2
 else block2
 fi
@@ -55,7 +55,7 @@ block2() {
               "Загружаю               " "      ▁ ▂ ▃ ▄ ▅ ▆ 68%"
     sleep 0.5
 
-curl -LJO -s $link/mm
+curl -LJO -s $link/mm.sh
 curl -LJO -s $scriptman
 
     printf " %${padding}s %s\n" \
@@ -68,13 +68,13 @@ curl -LJO -s $scriptman
 
 
 goto_mm() {                           
-if [ $? = 0 ] && [ -f $home/mm ]
-    then  sh ./mm -v
-        if [ $? = 77 ] # look in the mm script version exit 77
+if [ $? = 0 ] && [ -f $home/mm.sh ]
+    then  sh ./mm.sh -v
+        if [ $? = 77 ] # look in the mm.sh script version exit 77
             then printf " %s\n\n" $line1
-                sleep 1.0 && sh ./mm -h
-                  if [ $? = 55 ] # look in the mm script version exit 66
-                     then sleep 1.0 && sh ./mm -l
+                sleep 1.0 && sh ./mm.sh -h
+                  if [ $? = 55 ] # look in the mm.sh script version exit 66
+                     then sleep 1.0 && sh ./mm.sh -l
                      else printf " %s\n" $ERROR
                  fi
         fi
@@ -83,7 +83,7 @@ fi
 
 
 print_end() {
-if [ $? != 66 ] # look in the mm script show_help exit 55
+if [ $? != 66 ] # look in the mm.sh script show_help exit 55
     then printf " %s\n" $ERROR
     else printf " %s\n" " Сашечка, $SCRIPTNAME завершил программу"
     exit 0
