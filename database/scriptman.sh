@@ -26,7 +26,7 @@ padding5=-40
 linkdir="https://github.com/alexgeorgchist/my_tui/raw/main/database/scripts"
 
 ## GET SCRIPT LIST
-scriptlist=(6p chwf color info pogoda pokoypsaltir sysinfo top_custom_info town-loc) # Massiv tem
+scriptlist=(6p.sh chwf.sh color.sh info.sh pogoda.sh pokoypsaltir.sh sysinfo.sh top_custom_info.sh town-loc.sh) # Massiv tem
 LIMIT=${#scriptlist[@]} #Number of topics in the array list
 
 
@@ -116,7 +116,7 @@ version() {
 sm_logo
 	printf " %s\n" \
 	          " " \
-              ":.: $SCRIPTNAME - My Script Loader ( cripts for t-ui )" \
+              ":.: $SCRIPTNAME - My Script Loader ( scripts for t-ui )" \
 	          ":.: Версия программы  $VER от $DATERELEASE "	
 	exit 0
 }
