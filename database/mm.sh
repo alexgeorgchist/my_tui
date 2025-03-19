@@ -51,7 +51,7 @@ mmpiclink="https://raw.github.com/alexgeorgchist/my_tui//main/database/files_for
 scriptman="https://raw.github.com/alexgeorgchist/my_tui//main/database/scriptman"
 
 ## GET THEME LIST
-THEME_LIST=(aqua purplefon 2024 2025) # Massiv tem
+THEME_LIST=(aqua.sh purplefon.sh 2024.sh 2025.sh) # Massiv tem
 LIMIT=${#THEME_LIST[@]} #Number of topics in the array list
 
 
@@ -130,10 +130,10 @@ done
 	    "$line2"
 	printf " %s\n " \
 		" :.: Для установки набрать: mm номер" \
-		"    Пример: mm 3 [ загрузка 2024 ] " \
+		"    Пример: mm.sh 3 [ загрузка 2024.sh ] " \
 	    " " \
-		":.: mm -h    -- вызов справки"		
-    exit 66 # for mmload script    
+		":.: mm.sh -h    -- вызов справки"		
+    exit 66 # for mmload.sh script    
 }
 
 
@@ -142,7 +142,7 @@ version() {
 	          " " \
               ":.: $SCRIPTNAME - My Manager ( themes for t-ui )" \
 	          ":.: Версия программы  $VER от $DATERELEASE "	
-	exit 77 #for mmload script
+	exit 77 #for mmload.sh script
 }
 
 
@@ -184,12 +184,12 @@ sleep 0.5; printf "%${padding1}s%s\n" \
               " Прогресс выполнения: " "$PERCENT8"\
 	      ""
 cd $HOME
-if [[ ! -f scriptman ]]
+if [[ ! -f scriptman.sh ]]
     then curl -LJO -s $scriptman
 fi
     echo " ">>$TUIDIR/alias.txt
-    echo "scriptman =sh /storage/emulated/0/scriptman %">>$TUIDIR/alias.txt
-    echo "mm =sh /storage/emulated/0/mm %">>$TUIDIR/alias.txt
+    echo "scriptman =sh /storage/emulated/0/scriptman.sb %">>$TUIDIR/alias.txt
+    echo "mm =sh /storage/emulated/0/mm.sh %">>$TUIDIR/alias.txt
 sleep 0.5; printf "%${padding1}s%s\n" \
               " Прогресс выполнения: " "$PERCENT9" \
 	      ""
