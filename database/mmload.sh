@@ -19,8 +19,8 @@ SCRIPTNAME=${0##*/}
 home="/storage/emulated/0"
 link="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database"
 
-line1="============================================="
-line2="---------------------------------------------"
+line1="======================================="
+line2="---------------------------------------"
 ERROR="Что-то не то, надо разобраться"
 padding=23
 
