@@ -50,7 +50,7 @@ LINK="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes"
 mmpiclink="https://raw.github.com/alexgeorgchist/my_tui//main/database/files_for_tui/mmpic.txt"
 
 ## GET THEME LIST
-THEME_LIST=(aqua purplefon 2024 2025) # Massiv tem
+THEME_LIST=(aqua purplefon 2024 fiolent 2025) # Massiv tem
 LIMIT=${#THEME_LIST[@]} #Number of topics in the array list
 
 
