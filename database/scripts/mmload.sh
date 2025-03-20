@@ -17,7 +17,7 @@
 SCRIPTNAME=${0##*/}
 
 home="/storage/emulated/0/t-ui/script"
-link="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database"
+link="https://raw.githubusercontent.com/alexgeorgchist/my_tui/main/database/scripts"
 
 line1="============================================="
 line2="---------------------------------------------"
