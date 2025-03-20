@@ -190,7 +190,9 @@ cd $SCRIPTDIR
     curl -LJO -s $scriptlink/mm.sh
     curl -LJO -s $scriptlink/mmload.sh
     echo " ">>$TUIDIR/alias.txt
-    echo "scriptio =sh /storage/emulated/0/scriptio.sh %">>$TUIDIR/alias.txt
+    echo "scriptio =sh /storage/emulated/0/t-ui/script/scriptio.sh %">>$TUIDIR/alias.txt
+    echo "mm =sh /storage/emulated/0/t-ui/script/mm.sh %">>$TUIDIR/alias.txt
+    echo "mmload =sh /storage/emulated/0/t-ui/script/mmload.sh %">>$TUIDIR/alias.txt
 sleep 0.5; printf "%${padding1}s%s\n" \
               " Прогресс выполнения: " "$PERCENT9" \
 	      ""
