@@ -6,7 +6,7 @@
 <h2 align="center">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
 <h4>(EN) Color minimalism, you can change the color scheme. The basis is the use of scripts. I use mostly monochrome backgrounds for easy reading.</h4>
-<h4>(RU) Цветовой минимализм, вы можете менять цветовую гамму. В основе лежит использование шрифтов. Я использую в основном монохромные фоны для удобства чтения.</h4>
+<h4>(RU) Цветовой минимализм, можно менять цветовую гамму. В основе лежит использование скриптов. Я использую в основном монохромные фоны для удобства чтения.</h4>
 <h3><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2025.zip" target="_blank">Download</h3>
 <h4 align="center">***</h4>
 
