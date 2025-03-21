@@ -1,4 +1,4 @@
-<h2 align="center">Hi there, I'm <a target="_blank">Alexsander</a>
+<h2 align="center">Hi there, I'm Alexsander</a>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" height="32"/></a>
 <align="center">from Kazan Russia</h2>
 <h4>I use the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a>
