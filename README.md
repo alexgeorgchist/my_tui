@@ -27,6 +27,14 @@
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank">Download dark backgrounds</h4>
 <h4 align="center">***</h4>
 
+<h2 align="center">THEME "FIOLENT"</h2>
+<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/fiolent.jpg" alt="">
+<h4>(EN) Decorated in bright yellow, it is convenient in sunny weather. I use mostly monochrome backgrounds for easy reading.</h4>
+<h4>(RU) Фиолетовое оформление, он удобен для использования в темноте. Я использую в основном монохромные фоны для удобства чтения.</h4>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/fiolent.zip" target="_blank">Download theme</h4>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank">Download dark backgrounds</h4>
+<h4 align="center">***</h4>
+
 <h2 align="center">THEME "AQUA"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/aqua.jpg" alt="">
 <h4>(EN) Simple design, one of my first themes, program launch buttons in the form of icons. I use mostly monochrome backgrounds for easy reading.</h4>
