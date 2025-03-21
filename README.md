@@ -15,18 +15,21 @@
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/purplefon.jpg" alt="">
 <h4>(EN) Bright design, color notifications. I use mostly monochrome backgrounds for easy reading.</h4>
 <h4>(RU) Яркий дизайн, цветные уведомления. Я использую в основном монохромные фоны для удобства чтения.</h4>
-<h3><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/purplefon.zip" target="_blank">Download</h3>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/purplefon.zip" target="_blank">Download</h4>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank">Download background</h4>  
 <h4 align="center">***</h4>
 
 <h2 align="center">THEME "2024"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/2024.jpg" alt="">
 <h4>(EN) Decorated in bright yellow, it is convenient in sunny weather. I use mostly monochrome backgrounds for easy reading.</h4>
 <h4>(RU) Оформленный в ярко-желтых тонах, он удобен в солнечную погоду. Я использую в основном монохромные фоны для удобства чтения.</h4>
-<h3><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2024.zip" target="_blank">Download</h3>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2024.zip" target="_blank">Download</h4>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank">Download background</h4> 
 <h4 align="center">***</h4>
 
 <h2 align="center">THEME "AQUA"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/aqua.jpg" alt="">
 <h4>(EN) Simple design, one of my first themes, program launch buttons in the form of icons. I use mostly monochrome backgrounds for easy reading.</h4>
 <h4>(RU) Простой дизайн, одна из моих первых тем оформления, кнопки запуска программ в виде значков. В основном я использую монохромные фоны для удобства чтения.</h4>
-<h3><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank">Download</h3>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank">Download</h4>
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank">Download background</h4>
