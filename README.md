@@ -7,5 +7,6 @@
 <h1 align="center">THEME "2025"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
 
-
+<h4>Theme 2. Bright design, color notifications..</h4>
+<h1 align="center">THEME "PURPLEFON"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/purplefon.jpg" alt="">
