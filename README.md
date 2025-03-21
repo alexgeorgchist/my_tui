@@ -2,7 +2,7 @@
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" height="32"/></h2>
 <h2 align="center">I use the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a>
 <align="center">on my phone. Thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.<h2>
-
+<h4 align="center">***</h4>
 <h1 align="center">THEME "2025"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
 <h4>(EN) Color minimalism, you can change the color scheme. The basis is the use of scripts. I use mostly monochrome backgrounds for easy reading.</h4>
