@@ -7,18 +7,21 @@
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
 <h4>(EN) Color minimalism, you can change the color scheme. The basis is the use of scripts. I use mostly monochrome backgrounds for easy reading.</h4>
 <h4>(RU) Цветовой минимализм, вы можете менять цветовую гамму. В основе лежит использование шрифтов. Я использую в основном монохромные фоны для удобства чтения.</h4>
+<h3><a href="https://github.com/fandreuz" target="_blank">Download</h3>
 <h4 align="center">***</h4>
 
 <h1 align="center">THEME "PURPLEFON"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/purplefon.jpg" alt="">
 <h4>(EN) Bright design, color notifications. I use mostly monochrome backgrounds for easy reading.</h4>
 <h4>(RU) Яркий дизайн, цветные уведомления. Я использую в основном монохромные фоны для удобства чтения.</h4>
+
 <h4 align="center">***</h4>
 
 <h1 align="center">THEME "2024"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/2024.jpg" alt="">
 <h4>(EN) Decorated in bright yellow, it is convenient in sunny weather. I use mostly monochrome backgrounds for easy reading.</h4>
 <h4>(RU) Оформленный в ярко-желтых тонах, он удобен в солнечную погоду. Я использую в основном монохромные фоны для удобства чтения.</h4>
+
 <h4 align="center">***</h4>
 
 <h1 align="center">THEME "AQUA"</h1>
