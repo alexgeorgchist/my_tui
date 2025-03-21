@@ -6,3 +6,6 @@
 <h4>Theme 1. Color minimalism, you can change the color scheme. The basis is the use of scripts.</h4>
 <h1 align="center">THEME "2025"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
+
+
+<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/purplefon.jpg" alt="">
