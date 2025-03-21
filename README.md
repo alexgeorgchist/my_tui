@@ -1,7 +1,7 @@
 <h2 align="center">Hi there, I'm <a target="_blank">Alexsander</a> 
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" height="32"/></h2>
 <h2 align="center">I use the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a>
-<align="center">on my phone. Thanks to<a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a>
+<align="center">on my phone. Thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a>
 <align="center">Thanks.</h2>
 
 <h1 align="center">THEME "2025"</h1>
