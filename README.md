@@ -2,7 +2,7 @@
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" height="32"/></h2>
 <h2 align="center">I use the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a>
 <align="center">on my phone from <a href="https://github.com/fandreuz" target="_blank">FANDREUZ</a>
-<h2 align="center">Thanks</h2>
+<align="center">Thanks</h2>
 
 <h1 align="center">THEME "2025"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
