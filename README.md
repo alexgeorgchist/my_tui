@@ -25,4 +25,4 @@
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/aqua.jpg" alt="">
 <h4>(EN) Simple design, one of my first themes, program launch buttons in the form of icons. I use mostly monochrome backgrounds for easy reading.</h4>
 <h4>(RU) Простой дизайн, одна из моих первых тем оформления, кнопки запуска программ в виде значков. В основном я использую монохромные фоны для удобства чтения.</h4>
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Computer+science+student)](https://git.io/typing-svg)
+
