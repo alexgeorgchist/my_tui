@@ -5,7 +5,8 @@
 
 <h1 align="center">THEME "2025"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
-<h4>(EN) Color minimalism, you can change the color scheme. The basis is the use of scripts. I use mostly monochrome backgrounds for easy reading. (RU) Цветовой минимализм, вы можете менять цветовую гамму. В основе лежит использование шрифтов. Я использую в основном монохромные фоны для удобства чтения.</h4>
+<h4>(EN) Color minimalism, you can change the color scheme. The basis is the use of scripts. I use mostly monochrome backgrounds for easy reading.</h4>
+<h4>(RU) Цветовой минимализм, вы можете менять цветовую гамму. В основе лежит использование шрифтов. Я использую в основном монохромные фоны для удобства чтения.</h4>
 
 <h1 align="center">THEME "PURPLEFON"</h1>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/purplefon.jpg" alt="">
