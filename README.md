@@ -1,21 +1,8 @@
 <html>
-	<head>
-		<style>
-			h2 {
-				color:DarkCyan;
-			}
-			h3 {
-				color:DarkRed;
-			}
-			h4 {
-				color:DarkBlue;
-			}
-		</style>
-	</head>
 	<body>
-		<h2>How to set text color using HTML color names?</h2>
-		<h3>Add a style attribute to the text element you want to colorize and use the color name to specify the color.</h3>
-		<h4>There are over 140 named colors to choose from that you can use.</h4>
+		<h2 style="color:rgb(50,150,200);">How to use Text Color?</h2>
+		<h3 style="color:rgba(220,30,100,1);"> 1. Add a style attribute to the text element you want to colorize or use internal CSS.</h3>
+        <h4 style="color:#1A8D7E"> 2. Specify the color using RGB, RGBA or HEX code.</h4>
 	</body>
 </html>
 
