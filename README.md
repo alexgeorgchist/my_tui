@@ -1,12 +1,3 @@
-<html>
-	<body>
-		<h2 style="color:rgb(50,150,200);">How to use Text Color?</h2>
-		<h3 style="color:rgba(220,30,100,1);"> 1. Add a style attribute to the text element you want to colorize or use internal CSS.</h3>
-        <h4 style="color:#1A8D7E"> 2. Specify the color using RGB, RGBA or HEX code.</h4>
-	</body>
-</html>
-
-
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 
