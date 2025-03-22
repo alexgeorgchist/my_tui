@@ -1,3 +1,25 @@
+<html>
+	<head>
+		<style>
+			h2 {
+				color:DarkCyan;
+			}
+			h3 {
+				color:DarkRed;
+			}
+			h4 {
+				color:DarkBlue;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>How to set text color using HTML color names?</h2>
+		<h3>Add a style attribute to the text element you want to colorize and use the color name to specify the color.</h3>
+		<h4>There are over 140 named colors to choose from that you can use.</h4>
+	</body>
+</html>
+
+
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 
