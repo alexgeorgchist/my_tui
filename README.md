@@ -3,6 +3,8 @@
 
 <h4>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> and use it with my themes. Thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</h4>
 
+
+
 <h2 align="center">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="">
 <h4>(EN) Minimalism, you can change the color scheme. The theme is based on the use of scripts. I use mostly monochrome backgrounds for easy reading.</h4>
