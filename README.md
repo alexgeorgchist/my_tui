@@ -53,3 +53,8 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p><strong>(RU)</strong> Простой дизайн, одна из моих первых тем оформления, кнопки запуска программ в виде значков. В основном я использую монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
+
+
+<span style="color:blue"> Этот текст голубой.</span>
+<span style="color:red"> Этот текст красный.</span>
+<span style="color:#59afe1"> Этот текст цветной.</span>
