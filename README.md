@@ -1,7 +1,7 @@
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 
-<p>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> , thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a> I use it with my themes: </p>
-<li><strong>"2025"</strong></li>
+<h4>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> , thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a> I use it with my themes: </h4>
+<li>"2025"</li>
 <li>"Purplefon"</li>
 <li>"2024"</li>
 <li>"Fiolent"</li>
@@ -11,8 +11,8 @@
 
 <h2 align="center">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="Theme 2025">
-<h4>(EN) Minimalism, you can change the color scheme. The theme is based on the use of scripts. I use mostly monochrome backgrounds for easy reading.</h4>
-<h4>(RU) Минимализм, можно менять цветовую гамму. В основе темы лежит использование скриптов. Я использую в основном монохромные фоны для удобства чтения.</h4>
+<p><strong>(EN)</strong> Minimalism, you can change the color scheme. The theme is based on the use of scripts. I use mostly monochrome backgrounds for easy reading.</p>
+<p><strong>(RU)</strong> Минимализм, можно менять цветовую гамму. В основе темы лежит использование скриптов. Я использую в основном монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2025.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16 alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
 <h4 align="center">***</h4>
