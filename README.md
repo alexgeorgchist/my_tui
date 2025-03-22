@@ -13,7 +13,7 @@
 		</style>
 	</head>
 	<body>
-		<h2 style="color:red;">How to set text color using HTML color names?</h2>
+		<h2 style="color: red;">How to set text color using HTML color names?</h2>
 		<h3>Add a style attribute to the text element you want to colorize and use the color name to specify the color.</h3>
 		<h4>There are over 140 named colors to choose from that you can use.</h4>
 	</body>
