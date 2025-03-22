@@ -8,7 +8,20 @@
 <li>"Aqua"</li>
 </ul>
 
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 
+a:hover, a:active {
+  background-color: red;
+}
+</style>
 
 <h2 align="center">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="Theme 2025">
