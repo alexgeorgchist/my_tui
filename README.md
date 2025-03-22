@@ -1,7 +1,7 @@
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 
 
-<h4>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> and use it with my themes.<strong>Thanks</strong> to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</h4>
+<h4>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> and use it with my themes.<strong>Thanks</strong> to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.></h4>
 
 
 
