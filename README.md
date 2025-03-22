@@ -11,7 +11,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 </ol>
 
 
-<h2 align="center">THEME "2025"</h2>
+<h2 align="center" color="red">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="Theme 2025">
 <p><strong>(EN)</strong> Minimalism, you can change the color scheme. The theme is based on the use of scripts. I use mostly monochrome backgrounds for easy reading.</p>
 <p><strong>(RU)</strong> Минимализм, можно менять цветовую гамму. В основе темы лежит использование скриптов. Я использую в основном монохромные фоны для удобства чтения.</p>
