@@ -49,7 +49,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <hr>
 <h2 align="center">THEME "AQUA"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/aqua.jpg" alt="Theme aqua">
-<p style="color:red"><strong>(EN)</strong> Simple design, one of my first themes, program launch buttons in the form of icons. I use mostly monochrome backgrounds for easy reading.</p>
+<p style="color: red"><strong>(EN)</strong> Simple design, one of my first themes, program launch buttons in the form of icons. I use mostly monochrome backgrounds for easy reading.</p>
 <p><strong>(RU)</strong> Простой дизайн, одна из моих первых тем оформления, кнопки запуска программ в виде значков. В основном я использую монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
