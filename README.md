@@ -23,7 +23,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <h2 align="center">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="Theme 2025">
 <p><strong>(EN)</strong> Minimalism, you can change the color scheme. The theme is based on the use of scripts.<i> ( I use mostly monochrome backgrounds for easy reading).</i></p>
-<p><strong>(RU)</strong> Минимализм, можно менять цветовую гамму. В основе темы лежит использование скриптов. <i>( Я использую в основном монохромные фоны для удобства чтения)</i>.</p>
+<p><strong>(RU)</strong> Минимализм, можно менять цветовую гамму. В основе темы лежит использование скриптов. <i>( Я использую в основном монохромные фоны для удобства чтения).</i></p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2025.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16 alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
@@ -36,8 +36,8 @@ Click **[`back`](#back-heading)** to return
 <a id="second-heading"></a> 
 <h2 align="center">THEME "PURPLEFON"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/purplefon.jpg" alt="Theme purplefon">
-<p><strong>(EN)</strong> Bright design, color notifications. <i>( I use mostly monochrome backgrounds for easy reading.</i></p>
-<p><strong>(RU)</strong> Яркий дизайн, цветные уведомления. <i>( Я использую в основном монохромные фоны для удобства чтения.</i></p>
+<p><strong>(EN)</strong> Bright design, color notifications. <i>( I use mostly monochrome backgrounds for easy reading).</i></p>
+<p><strong>(RU)</strong> Яркий дизайн, цветные уведомления. <i>( Я использую в основном монохромные фоны для удобства чтения).</i></p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/purplefon.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
@@ -50,7 +50,7 @@ Click **[`back`](#back-heading)** to return
 <a id="third-heading"></a> 
 <h2 align="center">THEME "2024"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/2024.jpg" alt="Theme 2024">
-<p><strong>(EN)</strong> Decorated in bright yellow, it is convenient in sunny weather. <i>( I use mostly monochrome backgrounds for easy reading.)</i></p>
+<p><strong>(EN)</strong> Decorated in bright yellow, it is convenient in sunny weather. <i>( I use mostly monochrome backgrounds for easy reading).</i></p>
 <p><strong>(RU)</strong> Оформленный в ярко-желтых тонах, он удобен в солнечную погоду. <i>( Я использую в основном монохромные фоны для удобства чтения.)</i></p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2024.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download background"/>   Dark backgrounds</h4>
@@ -64,8 +64,8 @@ Click **[`back`](#back-heading)** to return
 <a id="fourth-heading"></a> 
 <h2 align="center">THEME "FIOLENT"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/fiolent.jpg" alt="Theme fiolent">
-<p><strong>(EN)</strong/> Decorated in bright yellow, it is convenient in sunny weather. <i>( I use mostly monochrome backgrounds for easy reading.)</i></p>
-<p><strong>(RU)</strong> Фиолетовое оформление, он удобен для использования в темноте. Я использую в основном монохромные фоны для удобства чтения.</p>
+<p><strong>(EN)</strong/> Decorated in bright yellow, it is convenient in sunny weather. <i>( I use mostly monochrome backgrounds for easy reading).</i></p>
+<p><strong>(RU)</strong> Фиолетовое оформление, он удобен для использования в темноте. <i>( Я использую в основном монохромные фоны для удобства чтения).</i></p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/fiolent.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Downlad theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
