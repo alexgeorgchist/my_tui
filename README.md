@@ -10,7 +10,7 @@
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> , thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a></p>
 <p>I use it with my themes: </p>
-[2025](#first-heading) Click to get to the this theme.
+[here](#first-heading) Click to get to the this theme.
 Click [here](#third-heading) to get to the third section.
 
 
