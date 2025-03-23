@@ -51,7 +51,7 @@ Click **[`back`](#back-heading)** to return
 <h2 align="center">THEME "2024"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/2024.jpg" alt="Theme 2024">
 <p><strong>(EN)</strong> Decorated in bright yellow, it is convenient in sunny weather. <i>( I use mostly monochrome backgrounds for easy reading).</i></p>
-<p><strong>(RU)</strong> Оформленный в ярко-желтых тонах, он удобен в солнечную погоду. <i>( Я использую в основном монохромные фоны для удобства чтения.)</i></p>
+<p><strong>(RU)</strong> Оформленный в ярко-желтых тонах, он удобен в солнечную погоду. <i>( Я использую в основном монохромные фоны для удобства чтения).</i></p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2024.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download background"/>   Dark backgrounds</h4>
  
@@ -78,8 +78,8 @@ Click **[`back`](#back-heading)** to return
 <a id="fifth-heading"></a> 
 <h2 align="center">THEME "AQUA"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/aqua.jpg" alt="Theme aqua">
-<p><strong>(EN)</strong> Simple design, one of my first themes, program launch buttons in the form of icons. I use mostly monochrome backgrounds for easy reading.</p>
-<p><strong>(RU)</strong> Простой дизайн, одна из моих первых тем оформления, кнопки запуска программ в виде значков. В основном я использую монохромные фоны для удобства чтения.</p>
+<p><strong>(EN)</strong> Simple design, one of my first themes, program launch buttons in the form of icons. <i>( I use mostly monochrome backgrounds for easy reading).</i></p>
+<p><strong>(RU)</strong> Простой дизайн, одна из моих первых тем оформления, кнопки запуска программ в виде значков. <i>( В основном я использую монохромные фоны для удобства чтения).</i></p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
