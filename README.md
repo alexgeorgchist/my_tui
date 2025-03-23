@@ -1,4 +1,4 @@
-[Telegram](https://t.me/tuilauncher)**
+**[Telegram](https://t.me/tuilauncher)**
 
 <GITHUB>
 
