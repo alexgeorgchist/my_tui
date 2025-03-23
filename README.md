@@ -1,5 +1,5 @@
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```php
+<?php here_pagecontent(); ?>
 ```
     
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
