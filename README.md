@@ -1,4 +1,6 @@
-
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
     
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
