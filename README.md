@@ -10,15 +10,14 @@
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> , thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a></p>
 <p>I use it with my themes: </p>
-<ul/>
-<li>2025<p>Click [here](#third-heading) to get to the third section.</p>
-<li>2024
-</ul>
+[2025](#first-heading) Click to get to the this theme.
+Click [here](#third-heading) to get to the third section.
+
 
 <hr>
 
 <THEME1>
-<a id="third-heading"></a> 
+<a id="first-heading"></a> 
 <h2 align="center">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="Theme 2025">
 <p><strong>(EN)</strong> Minimalism, you can change the color scheme. The theme is based on the use of scripts. I use mostly monochrome backgrounds for easy reading.</p>
