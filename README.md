@@ -6,11 +6,15 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
  
 #### I use it with my themes:
 
-[2025](#first-heading)<br>
-[PURPLEFON](#second-heading)<br>
-[2024](#third-heading)<br>
-[FIOLENT](#fourth-heading)<br>
-[AQUA](#fifth-heading)
+[`2025`](#first-heading)
+
+[`PURPLEFON`](#second-heading)
+
+[`2024`](#third-heading)
+
+[`FIOLENT`](#fourth-heading)
+
+[`AQUA`](#fifth-heading)
 
 <hr>
 
