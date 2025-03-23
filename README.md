@@ -2,7 +2,7 @@
 <a id="back-heading"></a>
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
-<h4>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> and <a href="https://github.com/v1nc/T-UI-Expert" target-"_blank">TUI-Expert</a> , thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a></h4>
+<h4>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> from <a href="https://github.com/fandreuz" target="_blank">FANDREUZ</a> and <a href="https://github.com/v1nc/T-UI-Expert" target-"_blank">TUI-Expert</a> from <a href="[https://github.com/fandreuz](https://github.com/v1nc)" target="_blank">FANDREUZ</a> , thanks to </h4>
 <hr>
  
 #### I use it with my themes:
