@@ -41,7 +41,7 @@ Click **[`back`](#back-heading)** to return
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/purplefon.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
-Click [`back`](#back-heading) to return
+Click **[`back`](#back-heading)** to return
 </THEME2>
 
 <hr>
@@ -55,7 +55,7 @@ Click [`back`](#back-heading) to return
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2024.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download background"/>   Dark backgrounds</h4>
  
-Click [`back`](#back-heading) to return
+Click **[`back`](#back-heading)** to return
 </THEME3>
 
 <hr>
@@ -69,7 +69,7 @@ Click [`back`](#back-heading) to return
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/fiolent.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Downlad theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
-Click [`back`](#back-heading) to return 
+Click **[`back`](#back-heading)** to return
 </THEME4>
 
 <hr>
@@ -83,7 +83,7 @@ Click [`back`](#back-heading) to return
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
-Click [`back`](#back-heading) to return
+Click **[`back`](#back-heading)** to return
 </THEME5> 
   
 <br>
