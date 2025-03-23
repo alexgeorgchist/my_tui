@@ -1,4 +1,9 @@
+- Click [here](#third-heading) to get to the third section.
 
+- Content for third heading.
+
+<a id="third-heading"></a>
+ Third section.
 
  
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
