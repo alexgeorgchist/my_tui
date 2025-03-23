@@ -1,7 +1,13 @@
 ```php
 <?php here_pagecontent(); ?>
 ```
-    
+```scss /* или css */
+@import "bower_components/tree-normalize/generic.normalize";
+h1 {
+ font-size:1.5em;
+ font-weight: 300;
+}
+```    
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> , thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a></p>
