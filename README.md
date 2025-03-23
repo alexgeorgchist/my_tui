@@ -16,6 +16,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <hr>
 
 <2025>
+
 <h2 align="center">THEME "2025"</h2>
 
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="Theme 2025">
