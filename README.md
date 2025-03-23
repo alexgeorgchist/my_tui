@@ -1,4 +1,4 @@
-![screenshot of sample](http://webdesign.ru.net/images/Heydon_min.jpg)
+
 
  
 <h2 align="center">Hi there<img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/Hi.gif" 
