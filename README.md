@@ -2,7 +2,7 @@
 height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 
 <p>I like the <a href="https://github.com/fandreuz/TUI-ConsoleLauncher" target="_blank">TUI-ConsoleLauncher</a> , thanks to <a href="https://github.com/fandreuz" target="_blank">FANDREUZ.</a> I use it with my themes: <p>
-<ol>
+<ul>
 <li><strong>"2025"</strong></li>
 <li><strong>"Purplefon"</strong></li>
 <li><strong>"2024"</strong></li>
