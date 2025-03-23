@@ -8,7 +8,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <li><strong>"2024"</strong></li>
 <li><strong>"Fiolent"</strong></li>
 <li><strong>"Aqua"</strong></li>
-</ol>
+</ul>
 
 <hr>
 <h2 align="center">THEME "2025"</h2>
