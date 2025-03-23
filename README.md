@@ -38,6 +38,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p><strong>(RU)</strong> Яркий дизайн, цветные уведомления. Я использую в основном монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/purplefon.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
+ 
 [back](#back-heading) 
 </THEME2>
 
@@ -51,6 +52,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p><strong>(RU)</strong> Оформленный в ярко-желтых тонах, он удобен в солнечную погоду. Я использую в основном монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2024.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download background"/>   Dark backgrounds</h4>
+ 
 [back](#back-heading) 
 </THEME3>
 
@@ -64,6 +66,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p><strong>(RU)</strong> Фиолетовое оформление, он удобен для использования в темноте. Я использую в основном монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/fiolent.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Downlad theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
+ 
 [back](#back-heading) 
 </THEME4>
 
@@ -77,6 +80,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p><strong>(RU)</strong> Простой дизайн, одна из моих первых тем оформления, кнопки запуска программ в виде значков. В основном я использую монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
+ 
 [back](#back-heading) 
 </THEME5> 
   
