@@ -19,8 +19,7 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <p><strong>(EN)</strong> Minimalism, you can change the color scheme. The theme is based on the use of scripts. I use mostly monochrome backgrounds for easy reading.</p>
 <p><strong>(RU)</strong> Минимализм, можно менять цветовую гамму. В основе темы лежит использование скриптов. Я использую в основном монохромные фоны для удобства чтения.</p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2025.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16 alt="Download theme"/>   Download theme</h4>
-<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
-[Download this theme](https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2025.zip)  
+<h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4> 
 </THEME1>
   
 <hr>
@@ -71,3 +70,4 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <h4 align="center">***<h4>
   
 </GITHUB>
+[Download this theme](https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2025.zip) 
