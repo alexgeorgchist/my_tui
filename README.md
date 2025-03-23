@@ -54,4 +54,4 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/aqua.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
 <br>
-##dfgyhhh##
+<h4 align="center">***<h4>
