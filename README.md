@@ -23,8 +23,8 @@ height="32"/>, I'm Alexsander<align="center"> from Kazan Russia</h2>
 <a id="first-heading"></a> 
 <h2 align="center">THEME "2025"</h2>
 <img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/theme2025red.jpg" alt="Theme 2025">
-<p><strong>(EN)</strong> Minimalism, you can change the color scheme. The theme is based on the use of scripts.<i> ( I use mostly monochrome backgrounds for easy reading).</i></p>
-<p><strong>(RU)</strong> Минимализм, можно менять цветовую гамму. В основе темы лежит использование скриптов. <i>( Я использую в основном монохромные фоны для удобства чтения).</i></p>
+<p><strong>(EN)</strong> Minimalism. The theme is based on the use of scripts.<i> ( I use mostly monochrome backgrounds for easy reading).</i></p>
+<p><strong>(RU)</strong> Минимализм. В основе темы лежит использование скриптов. <i>( Я использую в основном монохромные фоны для удобства чтения).</i></p>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/themes/2025.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16 alt="Download theme"/>   Download theme</h4>
 <h4><a href="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/dark_backgrnds.zip" target="_blank"><img src="https://github.com/alexgeorgchist/my_tui/raw/main/database/inf/load.PNG" height="16" alt="Download backgrounds"/>   Dark backgrounds</h4>
  
